@@ -4,7 +4,7 @@ import ContactUsSection from "./ContactUsSection";
 import Footer from "./Footer";
 import "./footersection.css";
 
-const Footersection = () => {
+const FootersectionScreeen = () => {
   return (
     <div className="contact-footer-container">
       <div className="main-content-wrapper">
@@ -21,4 +21,4 @@ const Footersection = () => {
   );
 };
 
-export default Footersection;
+export default FootersectionScreeen;

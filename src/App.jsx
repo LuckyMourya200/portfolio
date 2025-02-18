@@ -1,15 +1,15 @@
 import React from "react";
 import Home from "./header/Home";
 import AboutMeComponent from "./aboutme/AboutMeComponent";
-import Footersection from "./project/footersection";
 import WhatsAppButton from "./whatsapp/WhatsAppButton";
+import FootersectionScreeen from "./project/FootersectionScreeen";
 
 function App() {
   return (
     <div>
       <Home />
       <AboutMeComponent />
-      <Footersection />
+      <FootersectionScreeen />
       <WhatsAppButton />
     </div>
   );
