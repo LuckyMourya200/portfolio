@@ -1,38 +1,5 @@
 React vite deployment 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# luckyportfolio
-
 deployment steps
 
 step 1
