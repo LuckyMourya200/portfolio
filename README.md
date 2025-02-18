@@ -25,7 +25,8 @@ sudo docker pull developerlucky/luckyportfolio:latest
 sudo docker run -d -p 80:80 developerlucky/luckyportfolio:latest
 sudo docker ps
 
-
+sudo docker run -d -p 8080:80 developerlucky/luckyportfolio:latest
+use this 
 
 
 logs for cheack current project
@@ -42,3 +43,10 @@ sudo docker rm a2a8bc4ade0c
 
 
 ssh -i "MyHealthCareBackendKey.pem" ubuntu@ec2-13-202-65-134.ap-south-1.compute.amazonaws.com
+
+
+
+sudo docker stop 0ff741957068
+sudo docker rm 0ff741957068
+sudo docker stop a5fbd76ad0ea
+sudo docker rm a5fbd76ad0ea

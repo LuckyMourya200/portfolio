@@ -1,14 +1,13 @@
 import React from "react";
-import Layout from "./header/Layout";
+import Home from "./header/Home";
 import AboutMeComponent from "./aboutme/AboutMeComponent";
-import ContactUsAndFooterComponent from "./project/ContactUsAndFooterComponent";
-
+import Footersection from "./project/footersection";
 function App() {
   return (
     <div>
-      <Layout />
+      <Home />
       <AboutMeComponent />
-      <ContactUsAndFooterComponent />
+      <Footersection />
     </div>
   );
 }

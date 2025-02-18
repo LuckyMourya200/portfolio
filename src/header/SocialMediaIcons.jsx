@@ -1,74 +1,53 @@
-import React from 'react';
+import React from "react";
+import FaceBookicon from "../assets/facebook.png";
+import TwitterIcon from "../assets/twitter.png";
+import InstagramIcon from "../assets/Instagram.png";
+import LinkedinIcon from "../assets/Linkedin.png";
+import "./Home.css";
 
 const SocialMediaIcons = ({ style }) => {
   const icons = [
-    { id: 'facebook', url: 'https://facebook.com', alt: 'Facebook' },
-    { id: 'twitter', url: 'https://twitter.com', alt: 'Twitter' },
-    { id: 'instagram', url: 'https://instagram.com', alt: 'Instagram' },
-    { id: 'linkedin', url: 'https://linkedin.com', alt: 'LinkedIn' }
+    {
+      id: "facebook",
+      url: "https://www.facebook.com/DeveloperLucky",
+      alt: "Facebook",
+      src: FaceBookicon,
+    },
+    {
+      id: "twitter",
+      url: "https://x.com/LuckyMoury93731",
+      alt: "Twitter",
+      src: TwitterIcon,
+    },
+    {
+      id: "instagram",
+      url: "https://www.instagram.com/luckymourya007/",
+      alt: "Instagram",
+      src: InstagramIcon,
+    },
+    {
+      id: "linkedin",
+      url: "https://www.linkedin.com/in/lucky-mourya-968b6126b/",
+      alt: "LinkedIn",
+      src: LinkedinIcon,
+    },
   ];
 
-  const containerStyle = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    minWidth: '205px',
-    height: '32.48px',
-    ...style
-  };
-
-  const iconStyle = {
-    width: '32.48px',
-    height: '32.48px',
-    cursor: 'pointer',
-    transition: 'transform 0.2s ease-in-out',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  };
-
-  const iconHoverStyle = {
-    transform: 'scale(1.1)'
-  };
-
-  const handleMouseEnter = (e) => {
-    Object.assign(e.target.style, iconHoverStyle);
-  };
-
-  const handleMouseLeave = (e) => {
-    e.target.style.transform = 'none';
-  };
-
   return (
-    <div style={containerStyle}>
+    <div className="social-media-container" style={style}>
       {icons.map((icon) => (
         <a
           key={icon.id}
           href={icon.url}
           target="_blank"
           rel="noopener noreferrer"
-          style={iconStyle}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          className="social-media-icon"
         >
-          <img
-            src={`https://dashboard.codeparrot.ai/api/image/Z7H_749nxTWt8i-q/social-m.png`}
-            alt={icon.alt}
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'contain'
-            }}
-          />
+          <img src={icon.src} alt={icon.alt} />
         </a>
       ))}
     </div>
   );
 };
 
-SocialMediaIcons.defaultProps = {
-  style: {}
-};
-
 export default SocialMediaIcons;
-
