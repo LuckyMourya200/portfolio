@@ -7,10 +7,14 @@ const AboutMeComponent = () => {
   return (
     <div className="about-me-container">
       <div className="section-container">
-        <AboutSection />
+        <section id="about">
+          <AboutSection />
+        </section>
       </div>
       <div className="section-container">
-        <ServicesSection />
+        <section id="experience">
+          <ServicesSection />
+        </section>
       </div>
     </div>
   );

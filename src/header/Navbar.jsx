@@ -12,7 +12,16 @@ const Navbar = ({
       "https://s3.ap-south-1.amazonaws.com/developerlucky.in/LuckyMourya.pdf";
     window.open(cvUrl, "_blank");
   };
-
+  const handleScroll = (section) => {
+    const sectionId = section.toLowerCase().replace(" ", "-");
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
     <nav className="navbar-container">
       <a href="/" className="logo-wrapper">
@@ -23,7 +32,11 @@ const Navbar = ({
 
       <div className="menu-items">
         {menuItems.map((item) => (
-          <a key={item} className="menu-link">
+          <a
+            onClick={() => handleScroll(item)}
+            key={item}
+            className="menu-link"
+          >
             {item}
           </a>
         ))}

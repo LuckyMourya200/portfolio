@@ -3,8 +3,18 @@ import "./footersection.css";
 import SocialMediaIcons from "../header/SocialMediaIcons";
 
 const Footer = () => {
-  const menuItems = ["Home", "About", "Projects", "Experience", "Contact me"];
+  const menuItems = ["Home", "About", "Experience", "Projects", "Contact me"];
 
+  const handleScroll = (section) => {
+    const sectionId = section.toLowerCase().replace(" ", "-");
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
     <footer className="footer-container">
       <div className="footer-logo">
@@ -14,6 +24,7 @@ const Footer = () => {
       <div className="footer-menu">
         {menuItems.map((item, index) => (
           <div
+            onClick={() => handleScroll(item)}
             key={index}
             className="menu-item"
             onMouseOver={(e) =>

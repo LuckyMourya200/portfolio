@@ -8,8 +8,13 @@ const Footersection = () => {
   return (
     <div className="contact-footer-container">
       <div className="main-content-wrapper">
-        <ProjectsSection />
-        <ContactUsSection />
+        <section id="projects">
+          <ProjectsSection />
+        </section>
+
+        <section id="contact-me">
+          <ContactUsSection />
+        </section>
       </div>
       <Footer />
     </div>
