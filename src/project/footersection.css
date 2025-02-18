@@ -257,3 +257,25 @@
     font-size: 1rem;
   }
 }
+
+/* new styles for schedule button */
+/* ScheduleButton.css */
+.schedule-button {
+  background: #FD6F00;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.schedule-button:hover {
+  background: #CA5900;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 162, 255, 0.3);
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./aboutme.css"; // Import the CSS file
+import "./aboutme.css";
 
 const ServiceCard = ({ icon, title, description }) => (
   <div className="service-card">
@@ -13,36 +13,36 @@ const ServicesSection = ({
   services = [
     {
       icon: "https://dashboard.codeparrot.ai/api/image/Z7Idfo9nxTWt8i_A/icon-4.png",
-      title: "UI/UX",
+      title: "Full Stack Development",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh",
-    },
-    {
-      icon: "https://dashboard.codeparrot.ai/api/image/Z7Idfo9nxTWt8i_A/icon-3.png",
-      title: "Web Design",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh",
+        "Design & develop scalable web applications using Nest.js, React, and MongoDB. Expertise in REST APIs and MongoDB aggregation pipelines.",
     },
     {
       icon: "https://dashboard.codeparrot.ai/api/image/Z7Idfo9nxTWt8i_A/icon-2.png",
-      title: "App Design",
+      title: "Mobile App Development",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh",
+        "Build cross-platform apps with React Native. Published 2 Play Store apps with 50K+ downloads, integrated Firebase analytics.",
+    },
+    {
+      icon: "https://dashboard.codeparrot.ai/api/image/Z7Idfo9nxTWt8i_A/icon-3.png",
+      title: "Backend Systems",
+      description:
+        "Develop secure Spring Boot backends. Government API integration specialist (E-Way Bill systems), JWT/Spring Security implementation.",
     },
     {
       icon: "https://dashboard.codeparrot.ai/api/image/Z7Idfo9nxTWt8i_A/icon.png",
-      title: "Graphic Design",
+      title: "Cloud DevOps",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh",
+        "AWS Certified solutions with Dockerized deployments. CI/CD pipelines, EC2/S3 management, and Nginx configurations.",
     },
   ],
 }) => {
   return (
     <div className="services-section">
-      <h1 className="services-heading">Services</h1>
+      <h1 className="services-heading">Technical Expertise</h1>
       <p className="services-description">
-        Lorem ipsum dolor sit amet consectetur. Imperdiet convallis blandit
-        felis ligula aliquam venenatis fghh hgjj nisi ante.
+        Proven solutions delivered through 2+ years of professional development
+        experience
       </p>
       <div className="services-grid">
         {services.map((service, index) => (

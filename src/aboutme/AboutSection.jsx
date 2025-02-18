@@ -4,10 +4,12 @@ import "./aboutme.css";
 
 const AboutSection = () => {
   const skills = [
-    { name: "UX", percentage: 95 },
-    { name: "Website Design", percentage: 89 },
-    { name: "App Design", percentage: 93 },
-    { name: "Graphic Design", percentage: 88 },
+    { name: "Full Stack Development", percentage: 90 },
+    { name: "React & React Native", percentage: 85 },
+    { name: "Nest.js & Spring Boot", percentage: 80 },
+    { name: "CI/CD & Docker", percentage: 85 },
+    { name: "AWS & Firebase", percentage: 80 },
+    { name: "MongoDB & SQL", percentage: 85 },
   ];
 
   const SkillBar = ({ name, percentage }) => {
@@ -58,9 +60,11 @@ const AboutSection = () => {
         <div className="about-text-content">
           <h1 className="about-heading">About Me</h1>
           <p className="about-description">
-            Lorem ipsum dolor sit amet consectetur. Imperdiet convallis blandit
-            felis ligula aliquam venenatis nisi ante. Aliquet ornare tellus
-            consectetur lacus
+            I'm Lucky Mourya, a Full Stack Developer with a passion for creating
+            seamless and dynamic digital experiences. I specialize in building
+            scalable web applications using Nest.js and React, and I have
+            extensive experience in cross-platform mobile development with React
+            Native.
           </p>
           <div className="skills-container">
             {skills.map((skill, index) => (

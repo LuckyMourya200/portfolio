@@ -16,13 +16,20 @@ const Header = () => {
         </div>
 
         <p className="description">
-          Full Stack Developer with experience in building scalable web
-          applications using Nest.js, React, and MongoDB. Proficient in creating
-          cross-platform mobile applications with React Native. Skilled in
-          CI/CD, Docker, and AWS, ensuring efficient production deployment.
+          BTech CS student building production-grade solutions with 2+ years of
+          experience in full-stack development. Published React Native developer
+          with 50K+ app downloads. AWS Certified Developer specializing in
+          scalable cloud architectures.
         </p>
 
-        <button className="hire-btn">Let's Connect</button>
+        <button
+          onClick={() =>
+            (window.location = "mailto:luckymourya52132@gmail.com")
+          }
+          className="hire-btn"
+        >
+          Let's Connect
+        </button>
       </div>
 
       <div className="image-wrapper">

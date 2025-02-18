@@ -3,22 +3,12 @@ import "./footersection.css";
 import SocialMediaIcons from "../header/SocialMediaIcons";
 
 const Footer = () => {
-  const menuItems = [
-    "Home",
-    "About",
-    "Services",
-    "Projects",
-    "Testimonials",
-    "Contact Me",
-  ];
+  const menuItems = ["Home", "About", "Projects", "Experience", "Contact me"];
 
   return (
     <footer className="footer-container">
       <div className="footer-logo">
-        <div className="logo-box">
-          <span className="logo-letter">L</span>
-        </div>
-        <span className="brand-name">ucky</span>
+        <span className="brand-name">Lucky Mourya</span>
       </div>
 
       <div className="footer-menu">
