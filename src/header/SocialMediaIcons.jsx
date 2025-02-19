@@ -3,10 +3,25 @@ import FaceBookicon from "../assets/facebook.png";
 import TwitterIcon from "../assets/twitter.png";
 import InstagramIcon from "../assets/Instagram.png";
 import LinkedinIcon from "../assets/Linkedin.png";
+import GithubIcon from "../assets/github.png";
+
 import "./Home.css";
 
 const SocialMediaIcons = ({ style }) => {
   const icons = [
+    {
+      id: "linkedin",
+      url: "https://www.linkedin.com/in/lucky-mourya-968b6126b/",
+      alt: "LinkedIn",
+      src: LinkedinIcon,
+    },
+
+    {
+      id: "github",
+      url: "https://github.com/DEveL0perLuckY",
+      alt: "GitHub",
+      src: GithubIcon,
+    },
     {
       id: "facebook",
       url: "https://www.facebook.com/DeveloperLucky",
@@ -24,12 +39,6 @@ const SocialMediaIcons = ({ style }) => {
       url: "https://www.instagram.com/luckymourya007/",
       alt: "Instagram",
       src: InstagramIcon,
-    },
-    {
-      id: "linkedin",
-      url: "https://www.linkedin.com/in/lucky-mourya-968b6126b/",
-      alt: "LinkedIn",
-      src: LinkedinIcon,
     },
   ];
 

@@ -46,7 +46,7 @@ ssh -i "MyHealthCareBackendKey.pem" ubuntu@ec2-13-202-65-134.ap-south-1.compute.
 
 
 
-sudo docker stop b63dfb24fd59
-sudo docker rm b63dfb24fd59
+sudo docker stop 6fd761f503fa
+sudo docker rm 6fd761f503fa
 sudo docker stop a5fbd76ad0ea
 sudo docker rm a5fbd76ad0ea
