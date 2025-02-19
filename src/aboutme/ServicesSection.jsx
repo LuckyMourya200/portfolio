@@ -1,5 +1,9 @@
 import React from "react";
 import "./aboutme.css";
+import Full from "../assets/imageicon1.png";
+import Mobile from "../assets/imageicon2.png";
+import Backend from "../assets/imageicon3.png";
+import Cloud from "../assets/imageicon4.png";
 
 const ServiceCard = ({ icon, title, description }) => (
   <div className="service-card">
@@ -12,25 +16,25 @@ const ServiceCard = ({ icon, title, description }) => (
 const ServicesSection = ({
   services = [
     {
-      icon: "https://dashboard.codeparrot.ai/api/image/Z7Idfo9nxTWt8i_A/icon-4.png",
+      icon: Full,
       title: "Full Stack Development",
       description:
         "Design & develop scalable web applications using Nest.js, React, and MongoDB. Expertise in REST APIs and MongoDB aggregation pipelines.",
     },
     {
-      icon: "https://dashboard.codeparrot.ai/api/image/Z7Idfo9nxTWt8i_A/icon-2.png",
+      icon: Mobile,
       title: "Mobile App Development",
       description:
         "Build cross-platform apps with React Native. Published 2 Play Store apps with 50K+ downloads, integrated Firebase analytics.",
     },
     {
-      icon: "https://dashboard.codeparrot.ai/api/image/Z7Idfo9nxTWt8i_A/icon-3.png",
+      icon: Backend,
       title: "Backend Systems",
       description:
         "Develop secure Spring Boot backends. Government API integration specialist (E-Way Bill systems), JWT/Spring Security implementation.",
     },
     {
-      icon: "https://dashboard.codeparrot.ai/api/image/Z7Idfo9nxTWt8i_A/icon.png",
+      icon: Cloud,
       title: "Cloud DevOps",
       description:
         "AWS Certified solutions with Dockerized deployments. CI/CD pipelines, EC2/S3 management, and Nginx configurations.",
