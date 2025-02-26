@@ -45,7 +45,7 @@ const Footer = () => {
 
       <div className="copyright">
         <span className="copyright-text">
-          © 2025 Lucky All Rights Reserved , Inc.
+          © 2025 Lucky Mourya. All rights reserved.
         </span>
       </div>
     </footer>

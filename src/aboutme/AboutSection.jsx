@@ -60,11 +60,8 @@ const AboutSection = () => {
         <div className="about-text-content">
           <h1 className="about-heading">About Me</h1>
           <p className="about-description">
-            I'm Lucky Mourya, a Full Stack Developer with a passion for creating
-            seamless and dynamic digital experiences. I specialize in building
-            scalable web applications using Nest.js and React, and I have
-            extensive experience in cross-platform mobile development with React
-            Native.
+            I'm Lucky Mourya, a Full Stack Developer passionate about creating
+            seamless and dynamic digital experiences.
           </p>
           <div className="skills-container">
             {skills.map((skill, index) => (

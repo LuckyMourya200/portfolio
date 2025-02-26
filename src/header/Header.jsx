@@ -8,7 +8,7 @@ const Header = () => {
     <section id="home">
       <header className="header-container">
         <div className="header-content">
-          <span className="greeting">Hi I am</span>
+          <span className="greeting">Hi, I’m</span>
           <span className="name">Lucky Mourya</span>
 
           <div className="title-wrapper">
@@ -17,9 +17,9 @@ const Header = () => {
           </div>
 
           <p className="description">
-            BTech CS student building production-grade solutions with 2+ years
-            of experience in full-stack development. Published React Native
-            developer with 50K+ app downloads. AWS Certified Developer
+            BTech CS student developing production-grade solutions with 2+ years
+            of experience in full-stack development. A published React Native
+            developer with 50K+ app downloads and an AWS Certified Developer
             specializing in scalable cloud architectures.
           </p>
 
