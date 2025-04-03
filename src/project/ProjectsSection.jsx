@@ -5,9 +5,10 @@ import chreades from "../assets/projects/chreads.jpg";
 import ecom from "../assets/projects/ecom.png";
 import healthcare from "../assets/projects/healthcare.jpeg";
 import firsttolast from "../assets/projects/firsttolast.jpg";
-import webapp from "../assets/projects/webapp.png";
+import invoice from "../assets/projects/invoice.jpeg";
 import adarth from "../assets/projects/adarth.png";
 import backend from "../assets/projects/backend.png";
+
 const ProjectsSection = () => {
   const [categories] = useState([
     { id: 1, name: "All", selected: true },
@@ -30,23 +31,34 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: "Healthcare App",
-      link: "https://www.linkedin.com/posts/lucky-mourya-968b6126b_healthcaretech-reactnative-springboot-activity-7289526297054035968-I83G",
+      link: "https://www.youtube.com/watch?v=lziQeW3q_pM",
       image: healthcare,
       video: true,
       description:
-        "A full-stack healthcare application built with Spring Boot and React Native, featuring JWT security for secure access.",
-
+        "A full-stack healthcare solution enabling secure communication between users and doctors",
+      points: [
+        "🔹 React Native + Spring Boot App",
+        "🔹 JWT Security for Secure Access",
+        "🔹 AWS EC2 Deployment",
+        "🔹 User and Doctor Communication System",
+        "🔹 Prescription Sharing Feature",
+      ],
       color: "#e6eef9",
       category: "Full Stack Project",
     },
     {
-      title: "Email Builder",
-      link: "https://www.linkedin.com/posts/lucky-mourya-968b6126b_fullstackdevelopment-react-nestjs-activity-7288496537700077568-QWsC",
-      image: webapp,
+      title: "Get-Invoice",
+      link: "https://www.youtube.com/watch?v=wFQc8I3eYm0",
+      image: invoice,
       video: true,
       description:
-        "A dynamic email template builder built using React and NestJS, providing a seamless experience for marketers.",
-
+        "A cross-platform billing application built with React Native and Firebase.",
+      points: [
+        "🔹 Secure User Authentication",
+        "🔹 Real-time Invoice Management with Firestore",
+        "🔹 Modern, Responsive UI",
+        "🔹 Seamless Android & iOS Compatibility",
+      ],
       color: "white",
       category: "Full Stack Project",
     },
@@ -56,18 +68,15 @@ const ProjectsSection = () => {
       video: true,
       description:
         "A minimalistic eCommerce frontend design to showcase modern UI principles and UX enhancements.",
-
       color: "white",
       category: "WebApp",
     },
-
     {
       title: "Ximkart Backend",
       image: backend,
       link: "https://www.ximkart.com/",
       description:
         "A secure Spring Boot backend powering the Ximkart platform, integrating with government APIs for E-Way Bill processing.",
-
       color: "white",
       category: "Backend",
     },
@@ -77,17 +86,14 @@ const ProjectsSection = () => {
       link: "https://www.adarth.in/",
       description:
         "A NestJS-powered backend for managing ad campaigns and analytics, optimized for high performance.",
-
       color: "white",
       category: "Backend",
     },
-
     {
       title: "Truth or Dare",
       image: truthordare,
       link: "https://play.google.com/store/apps/details?id=com.androidmate.drinking.party.couples.dirty.truth.or.dare",
       description: "React Native !! Firebase !! Ads Intreagation",
-
       color: "#95c8d2",
       category: "Mobile Apps",
     },
@@ -96,7 +102,6 @@ const ProjectsSection = () => {
       image: chreades,
       link: "https://play.google.com/store/apps/details?id=com.lazytrunk.charades.headsup.guessup",
       description: "Expo Mobile Sensors !! Push Notification",
-
       color: "#f5fae2",
       category: "Mobile Apps",
     },
@@ -105,11 +110,11 @@ const ProjectsSection = () => {
       image: firsttolast,
       link: "https://play.google.com/store/apps/details?id=com.lazytrunk.first.to.last",
       description: "Deep Linking !! Multiplayer Game Firebase",
-
       color: "#efb280",
       category: "Mobile Apps",
     },
   ];
+
   const filteredProjects =
     selectedCategory === "All"
       ? projects
@@ -180,6 +185,15 @@ const ProjectsSection = () => {
             <div className="card-content">
               <h3>{project.title}</h3>
               <p className="project-description">{project.description}</p>
+              <div className="project-description">
+                {project.points && project.points.length > 0 && (
+                  <ul>
+                    {project.points.map((point, index) => (
+                      <li key={index}>{point}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
               <div className="project-links">
                 {project.video ? (
                   <a
