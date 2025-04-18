@@ -31,7 +31,7 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: "Healthcare App",
-      link: "https://www.youtube.com/watch?v=GrnIj7_HbsY",
+      link: "https://youtu.be/_KD9kA8CqG8",
       image: healthcare,
       video: true,
       description:
