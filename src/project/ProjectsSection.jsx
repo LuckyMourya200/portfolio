@@ -65,9 +65,11 @@ const ProjectsSection = () => {
     {
       title: "Basic eCommerce Design",
       image: ecom,
-      video: true,
+      link: "https://www.ecomnic.developerlucky.in",
+      video: false,
       description:
         "A minimalistic eCommerce frontend design to showcase modern UI principles and UX enhancements.",
+      points: ["🔹 Rreact App", "🔹 Firebase Auth", "🔹 FireStore DB"],
       color: "white",
       category: "WebApp",
     },
