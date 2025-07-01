@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./footersection.css";
-import truthordare from "../assets/projects/truthordare.jpg";
-import chreades from "../assets/projects/chreads.jpg";
+import crownbankers from "../assets/projects/crownbankers.png";
 import ecom from "../assets/projects/ecom.png";
 import healthcare from "../assets/projects/healthcare.jpeg";
-import firsttolast from "../assets/projects/firsttolast.jpg";
-import invoice from "../assets/projects/invoice.jpeg";
+import invoice from "../assets/projects/Invoice.png";
 import adarth from "../assets/projects/adarth.png";
 import backend from "../assets/projects/backend.png";
 
@@ -62,14 +60,21 @@ const ProjectsSection = () => {
       color: "white",
       category: "Full Stack Project",
     },
+
     {
-      title: "Basic eCommerce Design",
+      title: "MouzeKart",
       image: ecom,
-      link: "https://www.ecomnic.developerlucky.in",
+      link: "https://www.mouzekart.developerlucky.in",
       video: false,
       description:
-        "A minimalistic eCommerce frontend design to showcase modern UI principles and UX enhancements.",
-      points: ["🔹 Rreact App", "🔹 Firebase Auth", "🔹 FireStore DB"],
+        "A fast and modern e-commerce app for gaming accessories, built with React and Firebase. Includes real-time Firestore, secure auth, and a sleek UI.",
+      points: [
+        "🛒 Gaming Gear E-Commerce",
+        "🔐 Firebase Auth (Email + Google)",
+        "📦 Live Cart & Checkout (Firestore)",
+        "🖼️ Clean UI with Icons",
+        "⚡ Built with React + TailwindCSS",
+      ],
       color: "white",
       category: "WebApp",
     },
@@ -92,27 +97,40 @@ const ProjectsSection = () => {
       category: "Backend",
     },
     {
-      title: "Truth or Dare",
-      image: truthordare,
-      link: "https://play.google.com/store/apps/details?id=com.androidmate.drinking.party.couples.dirty.truth.or.dare",
-      description: "React Native !! Firebase !! Ads Intreagation",
-      color: "#95c8d2",
+      title: "Crown Bankers",
+      image: crownbankers,
+      link: "https://play.google.com/store/apps/details?id=com.crownbankers.app",
+      description:
+        "A secure and intuitive finance mobile app to explore market insights, track industry trends, and purchase cryptocurrencies in real-time.",
+      points: [
+        "📈 Real-Time Market Dashboards",
+        "💳 Crypto Purchase Flow with Secure UX",
+        "🔐 JWT Auth Integration with Redux & Secure Storage",
+        "📲 Built with React Native (Android)",
+        "🧭 Clean Navigation + Category-Wise Insights",
+      ],
+      color: "#ffffff",
+      category: "Mobile Apps",
+    },
+
+    {
+      title: "Codewords: Online Multiplayer",
+      image:
+        "https://play-lh.googleusercontent.com/U-VbrEXlvrDzqP1jjOHlNuCj0JS_Gnhhf09IHIRzi2y9Sw-maeex_HSb60ytYhTrnKEh=w480-h960-rw",
+      link: "https://play.google.com/store/apps/details?id=com.lazytrunk.codenames.secretagent.codewords",
+      description:
+        "Multiplayer spy party game built with Firebase and React Native.",
+      color: "#f2f2f2",
       category: "Mobile Apps",
     },
     {
-      title: "Charades: Party Game",
-      image: chreades,
-      link: "https://play.google.com/store/apps/details?id=com.lazytrunk.charades.headsup.guessup",
-      description: "Expo Mobile Sensors !! Push Notification",
-      color: "#f5fae2",
-      category: "Mobile Apps",
-    },
-    {
-      title: "First to Last",
-      image: firsttolast,
-      link: "https://play.google.com/store/apps/details?id=com.lazytrunk.first.to.last",
-      description: "Deep Linking !! Multiplayer Game Firebase",
-      color: "#efb280",
+      title: "This or That: Questions Game",
+      image:
+        "https://play-lh.googleusercontent.com/tcC8Dd40wm4zhxMA4U2iH1XnUieu6Rt8lCG6EJAJPQ-B_SxLJAs296YaUP1kVfm9uIk=w480-h960-rw",
+      link: "https://play.google.com/store/apps/details?id=com.lazytrunk.thisorthat",
+      description:
+        "Fun and quirky question game made using React Native + Firebase.",
+      color: "#fff2e2",
       category: "Mobile Apps",
     },
   ];
@@ -140,7 +158,7 @@ const ProjectsSection = () => {
 
       <div className="journey-highlights">
         <div className="highlight-card animate-fade-in">
-          <h3>2+ Years</h3>
+          <h3>1+ Years</h3>
           <p>Professional Development Experience</p>
         </div>
         <div className="highlight-card animate-fade-in">
