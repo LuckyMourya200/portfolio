@@ -15,9 +15,28 @@ const Experience = () => {
 
   const experience = [
     {
+      company: "Slayd",
+      role: "Mobile App Developer",
+      duration: "2025 Jul - Present",
+
+      highlights: [
+        "React Native mobile app",
+        "AI/ML integration",
+        "Python-based backend",
+      ],
+
+      projects: [
+        {
+          name: "Slayd app",
+          tech: ["React Native", "MongoDB", "Python"],
+          contribution: "Led frontend optimization & integrated AI modules",
+        },
+      ],
+    },
+    {
       company: "Acumensa Technologies",
       role: "Full Stack Developer",
-      duration: "2024 - Present",
+      duration: "2024 Sep - 2025 June",
       highlights: [
         "Scalable web apps with Nest.js/React",
         "MongoDB aggregation pipelines",
@@ -39,7 +58,7 @@ const Experience = () => {
     {
       company: "Lazy Trunk",
       role: "React Native Developer",
-      duration: "2024",
+      duration: "2024 May - 2024 Sep",
       highlights: [
         "Cross-platform mobile apps",
         "Play Store publications",
@@ -91,6 +110,7 @@ const Experience = () => {
               <h3>{exp.role}</h3>
               <div className="company-details">
                 <span className="company-name">{exp.company}</span>
+                <br />
                 <span className="experience-duration">{exp.duration}</span>
               </div>
             </div>

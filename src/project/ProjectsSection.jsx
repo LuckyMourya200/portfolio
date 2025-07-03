@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./footersection.css";
 import crownbankers from "../assets/projects/crownbankers.png";
 import ecom from "../assets/projects/ecom.png";
+import todo from "../assets/projects/todo.png";
+
 import healthcare from "../assets/projects/healthcare.jpeg";
 import invoice from "../assets/projects/Invoice.png";
 import adarth from "../assets/projects/adarth.png";
@@ -10,14 +12,13 @@ import backend from "../assets/projects/backend.png";
 const ProjectsSection = () => {
   const [categories] = useState([
     { id: 1, name: "All", selected: true },
-    { id: 2, name: "Full Stack Project", selected: false },
-    { id: 3, name: "WebApp", selected: false },
-    { id: 4, name: "Mobile Apps", selected: false },
-    { id: 5, name: "Backend", selected: false },
+    { id: 2, name: "WebApp", selected: false },
+    { id: 3, name: "Mobile Apps", selected: false },
+    { id: 4, name: "Backend", selected: false },
   ]);
 
   const [selectedCategory, setSelectedCategory] =
-    useState("Full Stack Project");
+    useState("WebApp");
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -27,6 +28,23 @@ const ProjectsSection = () => {
   }, [selectedCategory]);
 
   const projects = [
+    {
+      title: "Crown Bankers",
+      image: crownbankers,
+      link: "https://play.google.com/store/apps/details?id=com.crownbankers.app",
+      description:
+        "A secure and intuitive finance mobile app to explore market insights, track industry trends, and purchase cryptocurrencies in real-time.",
+      points: [
+        "📈 Real-Time Market Dashboards",
+        "💳 Crypto Purchase Flow with Secure UX",
+        "🔐 JWT Auth Integration with Redux & Secure Storage",
+        "📲 Built with React Native (Android)",
+        "🧭 Clean Navigation + Category-Wise Insights",
+      ],
+      color: "#ffffff",
+      category: "Mobile Apps",
+    },
+
     {
       title: "Healthcare App",
       link: "https://youtu.be/_KD9kA8CqG8",
@@ -42,7 +60,7 @@ const ProjectsSection = () => {
         "🔹 Prescription Sharing Feature",
       ],
       color: "#e6eef9",
-      category: "Full Stack Project",
+      category: "Mobile Apps",
     },
     {
       title: "Get-Invoice",
@@ -58,7 +76,7 @@ const ProjectsSection = () => {
         "🔹 Seamless Android & iOS Compatibility",
       ],
       color: "white",
-      category: "Full Stack Project",
+      category: "Mobile Apps",
     },
 
     {
@@ -73,6 +91,23 @@ const ProjectsSection = () => {
         "🔐 Firebase Auth (Email + Google)",
         "📦 Live Cart & Checkout (Firestore)",
         "🖼️ Clean UI with Icons",
+        "⚡ Built with React + TailwindCSS",
+      ],
+      color: "white",
+      category: "WebApp",
+    },
+    {
+      title: "Task Manager",
+      image: todo,
+      link: "https://task.developerlucky.in",
+      video: false,
+      description:
+        "A minimal and responsive personal task manager built with React.js and Tailwind CSS. Features include CRUD operations, localStorage data persistence, dark mode, and task filtering.",
+      points: [
+        "📝 Task Creation, Edit & Delete",
+        "🔍 Search by Title or Tag",
+        "📅 Set Due Dates & Priorities",
+        "🌗 Dark Mode Toggle",
         "⚡ Built with React + TailwindCSS",
       ],
       color: "white",
@@ -96,23 +131,6 @@ const ProjectsSection = () => {
       color: "white",
       category: "Backend",
     },
-    {
-      title: "Crown Bankers",
-      image: crownbankers,
-      link: "https://play.google.com/store/apps/details?id=com.crownbankers.app",
-      description:
-        "A secure and intuitive finance mobile app to explore market insights, track industry trends, and purchase cryptocurrencies in real-time.",
-      points: [
-        "📈 Real-Time Market Dashboards",
-        "💳 Crypto Purchase Flow with Secure UX",
-        "🔐 JWT Auth Integration with Redux & Secure Storage",
-        "📲 Built with React Native (Android)",
-        "🧭 Clean Navigation + Category-Wise Insights",
-      ],
-      color: "#ffffff",
-      category: "Mobile Apps",
-    },
-
     {
       title: "Codewords: Online Multiplayer",
       image:

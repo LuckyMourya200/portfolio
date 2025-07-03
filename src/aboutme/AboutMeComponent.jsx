@@ -12,9 +12,9 @@ const AboutMeComponent = () => {
         </section>
       </div>
       <div className="section-container">
-        <section id="experience">
-          <ServicesSection />
-        </section>
+        {/* <section id="experience"> */}
+        <ServicesSection />
+        {/* </section> */}
       </div>
     </div>
   );
