@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import profileImage from "../assets/profile2.png";
+
 import "./aboutme.css";
 
 const AboutSection = () => {
@@ -54,24 +54,21 @@ const AboutSection = () => {
   return (
     <div className="about-section">
       <div className="about-content">
-        <div className="about-image-wrapper">
-          <img src={profileImage} alt="About" className="about-image" />
-        </div>
         <div className="about-text-content">
           <h1 className="about-heading">About Me</h1>
           <p className="about-description">
             I'm Lucky Mourya, a Full Stack Developer passionate about creating
             seamless and dynamic digital experiences.
           </p>
-          <div className="skills-container">
-            {skills.map((skill, index) => (
-              <SkillBar
-                key={index}
-                name={skill.name}
-                percentage={skill.percentage}
-              />
-            ))}
-          </div>
+        </div>
+        <div className="skills-container">
+          {skills.map((skill, index) => (
+            <SkillBar
+              key={index}
+              name={skill.name}
+              percentage={skill.percentage}
+            />
+          ))}
         </div>
       </div>
     </div>

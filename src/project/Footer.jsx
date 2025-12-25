@@ -15,38 +15,42 @@ const Footer = () => {
       });
     }
   };
+
   return (
     <footer className="footer-container">
-      <div className="footer-logo">
-        <span className="brand-name">Lucky Mourya</span>
-      </div>
-
-      <div className="footer-menu">
-        {menuItems.map((item, index) => (
-          <div
-            onClick={() => handleScroll(item)}
-            key={index}
-            className="menu-item"
-            onMouseOver={(e) =>
-              (e.currentTarget.style.backgroundColor = "#f0f0f0")
-            }
-            onMouseOut={(e) =>
-              (e.currentTarget.style.backgroundColor = "transparent")
-            }
-          >
-            <span className="menu-text">{item}</span>
+      <div className="footer-content">
+        <div className="footer-brand-section">
+          <div className="footer-logo">
+            <span className="brand-name">Lucky Mourya</span>
+            
           </div>
-        ))}
+          <div className="footer-contact-info">
+            <p>Let's build something together.</p>
+          </div>
+        </div>
+
+        
+        <div className="footer-social-section">
+          <h3 className="footer-heading">Connect</h3>
+          <div className="social-icons-wrapper">
+            <SocialMediaIcons
+              style={{
+                justifyContent: "flex-start",
+                marginLeft: 0,
+                paddingLeft: 0,
+              }}
+            />
+          </div>
+
+        </div>
       </div>
 
-      <div className="social-icons">
-        <SocialMediaIcons />
-      </div>
-
-      <div className="copyright">
-        <span className="copyright-text">
-          © 2025 Lucky Mourya. All rights reserved.
-        </span>
+      <div className="footer-bottom">
+        <div className="copyright">
+          <span className="copyright-text">
+            © {new Date().getFullYear()} Lucky Mourya. All rights reserved.
+          </span>
+        </div>
       </div>
     </footer>
   );

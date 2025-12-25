@@ -18,7 +18,7 @@ const ProjectsSection = () => {
   ]);
 
   const [selectedCategory, setSelectedCategory] =
-    useState("WebApp");
+    useState("Backend");
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -176,7 +176,7 @@ const ProjectsSection = () => {
 
       <div className="journey-highlights">
         <div className="highlight-card animate-fade-in">
-          <h3>1+ Years</h3>
+          <h3>2+ Years</h3>
           <p>Professional Development Experience</p>
         </div>
         <div className="highlight-card animate-fade-in">

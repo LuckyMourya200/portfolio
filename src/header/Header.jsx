@@ -17,7 +17,7 @@ const Header = () => {
           </div>
 
           <p className="description">
-            BTech CS student developing production-grade solutions with 1+ years
+            BTech CS student developing production-grade solutions with 2+ years
             of experience in full-stack development. A published React Native
             developer with 10K+ app downloads and an AWS Certified Developer
             specializing in scalable cloud architectures.

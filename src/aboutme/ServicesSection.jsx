@@ -25,7 +25,7 @@ const ServicesSection = ({
       icon: Mobile,
       title: "Mobile App Development",
       description:
-        "Build cross-platform apps with React Native. Published 2 Play Store apps with 10K+ downloads, integrated Firebase analytics.",
+        "Build cross-platform apps with React Native. Published 4+ Play Store apps with 10K+ downloads, integrated Firebase analytics.",
     },
     {
       icon: Backend,
@@ -45,7 +45,7 @@ const ServicesSection = ({
     <div className="services-section">
       <h1 className="services-heading">Technical Expertise</h1>
       <p className="services-description">
-        Proven solutions delivered through 1+ years of professional development
+        Proven solutions delivered through 2+ years of professional development
         experience
       </p>
       <div className="services-grid">

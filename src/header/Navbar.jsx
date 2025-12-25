@@ -1,11 +1,9 @@
 import React from "react";
 import "./Home.css";
-import Licon from "../assets/L.png";
 
 const Navbar = ({
-  logoText = "ucky",
   menuItems = ["Home", "About", "Experience", "Projects", "Contact me"],
-  buttonText = "Download CV",
+  buttonText = "Resume",
 }) => {
   const handleDownload = () => {
     const cvUrl =
@@ -24,11 +22,6 @@ const Navbar = ({
   };
   return (
     <nav className="navbar-container">
-      <a href="/" className="logo-wrapper">
-        <img className="logo-icon" src={Licon}></img>
-
-        <span className="brand-name">{logoText}</span>
-      </a>
 
       <div className="menu-items">
         {menuItems.map((item) => (
