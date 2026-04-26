@@ -1,5 +1,5 @@
 import React from "react";
-import profileImage from "../assets/profile.png";
+import profileImage from "../assets/profile.webp";
 import SocialMediaIcons from "./SocialMediaIcons";
 import "./Home.css";
 
@@ -17,10 +17,9 @@ const Header = () => {
           </div>
 
           <p className="description">
-            BTech CS student developing production-grade solutions with 2+ years
-            of experience in full-stack development. A published React Native
-            developer with 10K+ app downloads and an AWS Certified Developer
-            specializing in scalable cloud architectures.
+            I'm a BTech CS student and Full Stack Developer with 2+ years of
+            experience building scalable digital products and end-to-end
+            solutions that create real impact.
           </p>
 
           <button

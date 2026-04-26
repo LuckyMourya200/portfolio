@@ -1,148 +1,202 @@
-.experience-section {
-  padding: 4rem 1.5rem;
-  background-color: #fff;
-  color: #222;
-  font-family: "Inter", sans-serif;
+/* ===================================================
+   Experience Section — Figma-inspired timeline style
+   =================================================== */
+
+.exp-section {
+  padding: 6rem 1.5rem;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
-.section-title {
-  font-size: 2.75rem;
+.exp-container {
+  max-width: 860px;
+  width: 100%;
+}
+
+/* ---- Header ---- */
+.exp-header {
+  margin-bottom: 3.5rem;
+  opacity: 0;
+  transform: translateY(-24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.exp-header.exp-header--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.exp-label {
+  display: block;
+  font-size: 0.8rem;
   font-weight: 700;
-  text-align: center;
-  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   color: #fd6f00;
-}
-
-/* 🛠️ Fix overall layout */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-/* ✅ Fixed grid: Avoid overflow by reducing min width */
-.experience-grid {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(280px, 1fr)
-  ); /* changed from 340px */
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem; /* horizontal padding for safety */
-}
-
-/* ✅ Prevent overflow issues on small screens */
-@media (max-width: 480px) {
-  .experience-section {
-    padding: 3rem 1rem;
-    overflow-x: hidden;
-  }
-
-  .experience-grid {
-    grid-template-columns: 1fr;
-    padding: 0;
-  }
-
-  .experience-card {
-    padding: 1rem;
-  }
-
-  .project-item,
-  .highlight-item {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-}
-
-.experience-card {
-  background: #f9f9f9;
-  border: 1px solid #eaeaea;
-  border-radius: 1rem;
-  padding: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.experience-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-}
-
-.card-header h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin: 0;
-  color: #333;
-}
-
-.company-details {
-  font-size: 0.95rem;
-  margin-top: 0.5rem;
-  color: #777;
-}
-
-.card-highlights {
-  margin-top: 1.2rem;
-}
-
-.highlight-item {
-  display: flex;
-  gap: 0.5rem;
-  font-size: 0.95rem;
-  margin-bottom: 0.75rem;
-  color: #444;
-}
-
-.highlight-icon {
-  color: #fd6f00;
-  font-weight: bold;
-}
-
-.card-projects {
-  margin-top: 1.5rem;
-}
-
-.project-item {
-  margin-bottom: 1.2rem;
-}
-
-.project-item h4 {
-  font-size: 1rem;
-  margin-bottom: 0.4rem;
-  color: #222;
-}
-
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
   margin-bottom: 0.6rem;
 }
 
-.tech-pill {
-  background: #ffe7d0;
-  padding: 0.25rem 0.7rem;
-  border-radius: 1rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-.project-item p {
-  font-size: 0.9rem;
-  color: #555;
+.exp-title {
+  font-size: 3rem;
+  font-weight: 800;
   margin: 0;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  line-height: 1;
 }
 
-/* Responsive */
+/* ---- Timeline ---- */
+.exp-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* gaps are handled by line + padding */
+}
+
+/* ---- Single timeline item ---- */
+.exp-item {
+  display: flex;
+  gap: 2rem;
+  /* Scroll-in animation */
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.exp-item.exp-item--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---- Left column: square + line ---- */
+.exp-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  padding-top: 0.2rem;
+}
+
+.exp-square {
+  width: 14px;
+  height: 14px;
+  background-color: #fd6f00;
+  flex-shrink: 0;
+  /* subtle pop-in driven by parent visibility class */
+  transform: scale(0);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s;
+}
+
+.exp-item.exp-item--visible .exp-square {
+  transform: scale(1);
+}
+
+.exp-line {
+  width: 2px;
+  background-color: #fd6f00;
+  flex-grow: 1;
+  margin-top: 10px;
+  /* grow from top */
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 0.8s ease 0.3s;
+}
+
+.exp-item.exp-item--visible .exp-line {
+  transform: scaleY(1);
+}
+
+/* last item: hide the trailing line */
+.exp-item:last-child .exp-line {
+  display: none;
+}
+
+/* ---- Right column: text content ---- */
+.exp-content {
+  flex: 1;
+  padding-bottom: 3rem;
+}
+
+/* last item has less bottom padding */
+.exp-item:last-child .exp-content {
+  padding-bottom: 0.5rem;
+}
+
+.exp-duration {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #6a7c92;
+  margin-bottom: 0.6rem;
+}
+
+.exp-role {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #111;
+  margin: 0 0 0.35rem 0;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+}
+
+.exp-company {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 1rem 0;
+}
+
+.exp-description {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.75;
+  margin: 0;
+  max-width: 640px;
+}
+
+/* ===================================================
+   Responsive
+   =================================================== */
 @media (max-width: 768px) {
-  .section-title {
+  .exp-section {
+    padding: 4rem 1rem;
+  }
+
+  .exp-title {
     font-size: 2.2rem;
   }
 
-  .experience-card {
-    padding: 1.5rem;
+  .exp-item {
+    gap: 1.25rem;
+  }
+
+  .exp-role {
+    font-size: 1.5rem;
+  }
+
+  .exp-square {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .exp-title {
+    font-size: 1.8rem;
+  }
+
+  .exp-role {
+    font-size: 1.3rem;
+  }
+
+  .exp-description {
+    font-size: 0.9rem;
   }
 }

@@ -82,10 +82,13 @@ body {
 .image-wrapper {
   max-width: 45%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-image {
-  width: 110%;
+  width: 80%;
   height: auto;
   max-height: 100vh;
   object-fit: contain;
@@ -164,8 +167,7 @@ body {
   gap: 1.5rem;
   z-index: 10;
   max-width: fit-content;
-  margin-left: auto;
-  /* margin-right: auto; */
+  margin: 1.5rem auto 0;
   flex-direction: row;
 }
 
@@ -236,24 +238,16 @@ body {
   }
   .navbar-container {
     padding: 1rem;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
     gap: 1rem;
   }
   .menu-items {
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-  }
-  .menu-link {
-    font-size: 1rem;
-    padding: 0.3rem;
+    display: none; /* Hide nav links on mobile */
   }
   .download-btn {
-    width: 100%;
-    text-align: center;
-    padding: 0.6rem 1rem;
+    width: auto; /* Not fully expanded */
+    padding: 0.6rem 1.2rem;
   }
   .social-media-container {
     margin: 1rem auto;

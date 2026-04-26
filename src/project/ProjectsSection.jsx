@@ -18,7 +18,7 @@ const ProjectsSection = () => {
   ]);
 
   const [selectedCategory, setSelectedCategory] =
-    useState("Backend");
+    useState("WebApp");
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
