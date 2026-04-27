@@ -1,5 +1,3 @@
-import React from "react";
-import FaceBookicon from "../assets/facebook.png";
 import TwitterIcon from "../assets/twitter.png";
 import InstagramIcon from "../assets/Instagram.png";
 import LinkedinIcon from "../assets/Linkedin.png";
@@ -21,12 +19,6 @@ const SocialMediaIcons = ({ style }) => {
       url: "https://github.com/DEveL0perLuckY",
       alt: "GitHub",
       src: GithubIcon,
-    },
-    {
-      id: "facebook",
-      url: "https://www.facebook.com/DeveloperLucky",
-      alt: "Facebook",
-      src: FaceBookicon,
     },
     {
       id: "twitter",

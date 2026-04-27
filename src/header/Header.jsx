@@ -1,4 +1,3 @@
-import React from "react";
 import profileImage from "../assets/profile.webp";
 import SocialMediaIcons from "./SocialMediaIcons";
 import "./Home.css";
@@ -17,18 +16,16 @@ const Header = () => {
           </div>
 
           <p className="description">
-            I'm a BTech CS student and Full Stack Developer with 2+ years of
-            experience building scalable digital products and end-to-end
+            I&apos;m a BTech CS student and Full Stack Developer with 2+ years
+            of experience building scalable digital products and end-to-end
             solutions that create real impact.
           </p>
 
           <button
-            onClick={() =>
-              (window.location = "mailto:luckymourya52132@gmail.com")
-            }
+            onClick={() => (window.location = "mailto:hello@developerlucky.in")}
             className="hire-btn"
           >
-            Let's Connect
+            Let&apos;s Connect
           </button>
         </div>
 

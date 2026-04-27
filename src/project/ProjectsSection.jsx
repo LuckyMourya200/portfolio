@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./footersection.css";
-import crownbankers from "../assets/projects/crownbankers.png";
 import ecom from "../assets/projects/ecom.png";
 import todo from "../assets/projects/todo.png";
 
@@ -17,8 +16,7 @@ const ProjectsSection = () => {
     { id: 4, name: "Backend", selected: false },
   ]);
 
-  const [selectedCategory, setSelectedCategory] =
-    useState("WebApp");
+  const [selectedCategory, setSelectedCategory] = useState("WebApp");
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -29,17 +27,19 @@ const ProjectsSection = () => {
 
   const projects = [
     {
-      title: "Crown Bankers",
-      image: crownbankers,
-      link: "https://play.google.com/store/apps/details?id=com.crownbankers.app",
+      title: "slayd.in",
+      image:
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a5/78/6b/a5786be3-d653-c35b-c35d-d0e1f6bc29c1/Placeholder.mill/400x400bb-75.webp",
+      link: "https://apps.apple.com/in/app/slayd-app/id6749233916",
+
       description:
-        "A secure and intuitive finance mobile app to explore market insights, track industry trends, and purchase cryptocurrencies in real-time.",
+        "Collaborated with the Slayd team to build an AI-powered fashion commerce platform for outfit discovery and shopping.",
+
       points: [
-        "📈 Real-Time Market Dashboards",
-        "💳 Crypto Purchase Flow with Secure UX",
-        "🔐 JWT Auth Integration with Redux & Secure Storage",
-        "📲 Built with React Native (Android)",
-        "🧭 Clean Navigation + Category-Wise Insights",
+        "⚡ Optimized app performance & API handling",
+        "🧭 Built scalable Redux navigation architecture",
+        "🔗 Improved deep linking & analytics tracking",
+        "🛍️ Enhanced AI-driven shopping experience",
       ],
       color: "#ffffff",
       category: "Mobile Apps",
@@ -125,7 +125,6 @@ const ProjectsSection = () => {
     {
       title: "Adarth Backend",
       image: adarth,
-      link: "https://www.adarth.in/",
       description:
         "A NestJS-powered backend for managing ad campaigns and analytics, optimized for high performance.",
       color: "white",
@@ -169,8 +168,9 @@ const ProjectsSection = () => {
           <span className="highlight">Development</span> Journey
         </h1>
         <p className="section-subtitle animate-slide-in">
-          I'm eager to explore new technologies and work on real-world projects.
-          With each project, I'm learning new skills and improving myself.
+          I&apos;m eager to explore new technologies and work on real-world
+          projects. With each project, I&apos;m learning new skills and
+          improving myself.
         </p>
       </div>
 

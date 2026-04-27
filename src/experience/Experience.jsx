@@ -39,7 +39,7 @@ const TimelineItem = ({ exp, index }) => {
           observer.unobserve(el);
         }
       },
-      { threshold: 0.18 }
+      { threshold: 0.18 },
     );
 
     observer.observe(el);
@@ -82,7 +82,7 @@ const Experience = () => {
           observer.unobserve(el);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     observer.observe(el);
     return () => observer.disconnect();

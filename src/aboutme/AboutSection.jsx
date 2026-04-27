@@ -91,9 +91,9 @@ const AboutSection = () => {
         <span className="about-label">Who I Am</span>
         <h1 className="about-heading-new">About Me</h1>
         <p className="about-desc-new">
-          I'm <strong>Lucky Mourya</strong>, a passionate Full Stack Developer
-          who loves building robust, scalable end-to-end systems and digital
-          experiences.
+          I&apos;m <strong>Lucky Mourya</strong>, a passionate Full Stack
+          Developer who loves building robust, scalable end-to-end systems and
+          digital experiences.
         </p>
         <p className="about-desc-new">
           With expertise across the full product lifecycle, I thrive on turning

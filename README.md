@@ -1,4 +1,4 @@
-React vite deployment 
+React vite deployment
 
 deployment steps
 
@@ -14,7 +14,6 @@ docker tag developerlucky/luckyportfolio developerlucky/luckyportfolio:latest
 
 docker push developerlucky/luckyportfolio:latest
 
-
 In ec2
 
 sudo apt update  
@@ -26,25 +25,18 @@ sudo docker run -d -p 80:80 developerlucky/luckyportfolio:latest
 sudo docker ps
 
 sudo docker run -d -p 8080:80 developerlucky/luckyportfolio:latest
-use this 
-
+use this
 
 logs for cheack current project
 
 sudo docker logs -f 1802fa9356ab
-
-
 
 stop exesting contienr and remove project
 
 sudo docker stop a2a8bc4ade0c
 sudo docker rm a2a8bc4ade0c
 
-
-
 ssh -i "MyHealthCareBackendKey.pem" ubuntu@ec2-13-202-65-134.ap-south-1.compute.amazonaws.com
-
-
 
 sudo docker stop 6fd761f503fa
 sudo docker rm 6fd761f503fa

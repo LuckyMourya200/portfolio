@@ -469,7 +469,9 @@
   font-size: 0.92rem;
   color: #444;
   cursor: pointer;
-  transition: color 0.2s ease, padding-left 0.2s ease;
+  transition:
+    color 0.2s ease,
+    padding-left 0.2s ease;
   display: inline-block;
 }
 
@@ -488,7 +490,9 @@
   transition: color 0.2s ease;
 }
 
-.footer-email:hover { color: #ff6300; }
+.footer-email:hover {
+  color: #ff6300;
+}
 
 /* Social icons inside footer — smaller */
 .footer-root .social-media-container {
@@ -528,13 +532,17 @@
   color: #888;
 }
 
-.footer-heart { color: #ff6300; }
+.footer-heart {
+  color: #ff6300;
+}
 
 /* ============================================================
    FOOTER RESPONSIVE
    ============================================================ */
 @media (max-width: 768px) {
-  .footer-inner { padding: 2.5rem 1.25rem 1.25rem; }
+  .footer-inner {
+    padding: 2.5rem 1.25rem 1.25rem;
+  }
 
   .footer-top {
     grid-template-columns: 1fr;
@@ -542,26 +550,48 @@
     text-align: center;
   }
 
-  .footer-brand { align-items: center; }
-  .footer-tagline { max-width: 100%; }
+  .footer-brand {
+    align-items: center;
+  }
+  .footer-tagline {
+    max-width: 100%;
+  }
 
-  .footer-col { align-items: center; }
+  .footer-col {
+    align-items: center;
+  }
 
-  .footer-nav { align-items: center; }
-  .footer-nav-link:hover { padding-left: 0; }
+  .footer-nav {
+    align-items: center;
+  }
+  .footer-nav-link:hover {
+    padding-left: 0;
+  }
 
-  .footer-root .social-media-container { justify-content: center; }
+  .footer-root .social-media-container {
+    justify-content: center;
+  }
 
-  .footer-bottom { justify-content: center; text-align: center; flex-direction: column; }
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
-  .footer-name { font-size: 1.25rem; }
-  .footer-inner { padding: 2rem 1rem 1rem; }
+  .footer-name {
+    font-size: 1.25rem;
+  }
+  .footer-inner {
+    padding: 2rem 1rem 1rem;
+  }
 }
 
 /* ---- Legacy footer classes (keep for backward compat) ---- */
-.footer-container { display: none; } /* replaced by footer-root */
+.footer-container {
+  display: none;
+} /* replaced by footer-root */
 
 .footer-content {
   display: flex;
@@ -642,7 +672,9 @@
   font-size: 1rem;
   color: #444;
   cursor: pointer;
-  transition: color 0.3s ease, padding-left 0.3s ease;
+  transition:
+    color 0.3s ease,
+    padding-left 0.3s ease;
 }
 
 .menu-item:hover {

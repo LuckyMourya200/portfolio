@@ -6,7 +6,7 @@ const WhatsAppButton = () => {
   const defaultMessage = "Hi Lucky! I saw your portfolio...";
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-    defaultMessage
+    defaultMessage,
   )}`;
 
   return (

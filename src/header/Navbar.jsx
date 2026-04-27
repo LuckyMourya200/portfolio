@@ -22,7 +22,6 @@ const Navbar = ({
   };
   return (
     <nav className="navbar-container">
-
       <div className="menu-items">
         {menuItems.map((item) => (
           <a

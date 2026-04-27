@@ -1,4 +1,3 @@
-import React from "react";
 import "./footersection.css";
 import SocialMediaIcons from "../header/SocialMediaIcons";
 
@@ -16,7 +15,6 @@ const Footer = () => {
   return (
     <footer className="footer-root">
       <div className="footer-inner">
-
         {/* Top row */}
         <div className="footer-top">
           {/* Brand */}
@@ -33,7 +31,10 @@ const Footer = () => {
             <ul className="footer-nav">
               {links.map((l) => (
                 <li key={l}>
-                  <span className="footer-nav-link" onClick={() => handleScroll(l)}>
+                  <span
+                    className="footer-nav-link"
+                    onClick={() => handleScroll(l)}
+                  >
                     {l}
                   </span>
                 </li>
@@ -45,11 +46,8 @@ const Footer = () => {
           <div className="footer-col">
             <h4 className="footer-col-heading">Connect</h4>
             <SocialMediaIcons />
-            <a
-              href="mailto:luckymourya52132@gmail.com"
-              className="footer-email"
-            >
-              luckymourya52132@gmail.com
+            <a href="mailto:hello@developerlucky.in" className="footer-email">
+              hello@developerlucky.in
             </a>
           </div>
         </div>
