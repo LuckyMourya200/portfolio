@@ -1,22 +1,16 @@
 import { useState, useEffect } from "react";
 import "./footersection.css";
-import ecom from "../assets/projects/ecom.png";
-import todo from "../assets/projects/todo.png";
-
-import healthcare from "../assets/projects/healthcare.jpeg";
-import invoice from "../assets/projects/Invoice.png";
 import adarth from "../assets/projects/adarth.png";
 import backend from "../assets/projects/backend.png";
 
 const ProjectsSection = () => {
   const [categories] = useState([
     { id: 1, name: "All", selected: true },
-    { id: 2, name: "WebApp", selected: false },
     { id: 3, name: "Mobile Apps", selected: false },
     { id: 4, name: "Backend", selected: false },
   ]);
 
-  const [selectedCategory, setSelectedCategory] = useState("WebApp");
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -43,75 +37,6 @@ const ProjectsSection = () => {
       ],
       color: "#ffffff",
       category: "Mobile Apps",
-    },
-
-    {
-      title: "Healthcare App",
-      link: "https://youtu.be/_KD9kA8CqG8",
-      image: healthcare,
-      video: true,
-      description:
-        "A full-stack healthcare solution enabling secure communication between users and doctors",
-      points: [
-        "🔹 React Native + Spring Boot App",
-        "🔹 JWT Security for Secure Access",
-        "🔹 AWS EC2 Deployment",
-        "🔹 User and Doctor Communication System",
-        "🔹 Prescription Sharing Feature",
-      ],
-      color: "#e6eef9",
-      category: "Mobile Apps",
-    },
-    {
-      title: "Get-Invoice",
-      link: "https://www.youtube.com/watch?v=wFQc8I3eYm0",
-      image: invoice,
-      video: true,
-      description:
-        "A cross-platform billing application built with React Native and Firebase.",
-      points: [
-        "🔹 Secure User Authentication",
-        "🔹 Real-time Invoice Management with Firestore",
-        "🔹 Modern, Responsive UI",
-        "🔹 Seamless Android & iOS Compatibility",
-      ],
-      color: "white",
-      category: "Mobile Apps",
-    },
-
-    {
-      title: "MouzeKart",
-      image: ecom,
-      link: "https://www.mouzekart.developerlucky.in",
-      video: false,
-      description:
-        "A fast and modern e-commerce app for gaming accessories, built with React and Firebase. Includes real-time Firestore, secure auth, and a sleek UI.",
-      points: [
-        "🛒 Gaming Gear E-Commerce",
-        "🔐 Firebase Auth (Email + Google)",
-        "📦 Live Cart & Checkout (Firestore)",
-        "🖼️ Clean UI with Icons",
-        "⚡ Built with React + TailwindCSS",
-      ],
-      color: "white",
-      category: "WebApp",
-    },
-    {
-      title: "Task Manager",
-      image: todo,
-      link: "https://task.developerlucky.in",
-      video: false,
-      description:
-        "A minimal and responsive personal task manager built with React.js and Tailwind CSS. Features include CRUD operations, localStorage data persistence, dark mode, and task filtering.",
-      points: [
-        "📝 Task Creation, Edit & Delete",
-        "🔍 Search by Title or Tag",
-        "📅 Set Due Dates & Priorities",
-        "🌗 Dark Mode Toggle",
-        "⚡ Built with React + TailwindCSS",
-      ],
-      color: "white",
-      category: "WebApp",
     },
     {
       title: "Ximkart Backend",
