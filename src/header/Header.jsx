@@ -1,8 +1,14 @@
 import profileImage from "../assets/profile.webp";
 import SocialMediaIcons from "./SocialMediaIcons";
 import "./Home.css";
+import { track } from "@vercel/analytics/react";
 
 const Header = () => {
+  const handleConnectClick = () => {
+    track('Contacted via Email');
+    window.location = "mailto:hello@developerlucky.in";
+  };
+
   return (
     <section id="home">
       <header className="header-container">
@@ -22,7 +28,7 @@ const Header = () => {
           </p>
 
           <button
-            onClick={() => (window.location = "mailto:hello@developerlucky.in")}
+            onClick={handleConnectClick}
             className="hire-btn"
           >
             Let&apos;s Connect

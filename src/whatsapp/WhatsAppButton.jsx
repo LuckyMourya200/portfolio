@@ -1,5 +1,6 @@
 import whatsapp from "../assets/whatsapp.png";
 import "./whatsapp.css";
+import { track } from "@vercel/analytics/react";
 
 const WhatsAppButton = () => {
   const phoneNumber = "+919165309608";
@@ -9,6 +10,10 @@ const WhatsAppButton = () => {
     defaultMessage,
   )}`;
 
+  const handleWhatsAppClick = () => {
+    track('Contacted via WhatsApp');
+  };
+
   return (
     <div className="whatsapp-button">
       <a
@@ -16,6 +21,7 @@ const WhatsAppButton = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on whatsapp"
+        onClick={handleWhatsAppClick}
       >
         <img className="whatsapp-icon" src={whatsapp} alt={"whatsapp"} />
       </a>

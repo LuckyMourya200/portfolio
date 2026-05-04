@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./footersection.css";
 import adarth from "../assets/projects/adarth.png";
 import backend from "../assets/projects/backend.png";
+import { track } from "@vercel/analytics/react";
 
 const ProjectsSection = () => {
   const [categories] = useState([
@@ -86,6 +87,10 @@ const ProjectsSection = () => {
     setSelectedCategory(categoryName);
   };
 
+  const handleProjectClick = (projectName) => {
+    track("Viewed Project", { project: projectName });
+  };
+
   return (
     <section className="projects-section" id="projects">
       <div className="section-header">
@@ -163,6 +168,7 @@ const ProjectsSection = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => handleProjectClick(project.title)}
                   >
                     Watch Demo
                   </a>
@@ -172,6 +178,7 @@ const ProjectsSection = () => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => handleProjectClick(project.title)}
                     >
                       View Project
                     </a>

@@ -4,6 +4,7 @@ import AboutMeComponent from "./aboutme/AboutMeComponent";
 import WhatsAppButton from "./whatsapp/WhatsAppButton";
 import FootersectionScreeen from "./project/FootersectionScreeen";
 import Experience from "./experience/Experience";
+import { Analytics } from "@vercel/analytics/react";
 
 const SectionDivider = () => (
   <div
@@ -28,6 +29,7 @@ function App() {
       <SectionDivider />
       <FootersectionScreeen />
       <WhatsAppButton />
+      <Analytics />
     </div>
   );
 }
