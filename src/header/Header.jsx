@@ -14,7 +14,7 @@ const Header = () => {
       <header className="header-container">
         <div className="header-content">
           <span className="greeting">Hi, I’m</span>
-          <span className="name">Lucky Mourya</span>
+          <h1 className="name">Lucky Mourya</h1>
 
           <div className="title-wrapper">
             <h1 className="main-title">Full Stack</h1>
@@ -33,7 +33,15 @@ const Header = () => {
         </div>
 
         <div className="image-wrapper">
-          <img src={profileImage} alt="Profile" className="profile-image" />
+          <img
+            src={profileImage}
+            alt="Profile of Lucky Mourya"
+            className="profile-image"
+            width="800"
+            height="696"
+            fetchPriority="high"
+            decoding="async"
+          />
           <SocialMediaIcons />
         </div>
       </header>

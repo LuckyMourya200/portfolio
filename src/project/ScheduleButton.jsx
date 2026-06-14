@@ -10,7 +10,7 @@ const ScheduleButton = () => {
       rel="noopener noreferrer"
       className="schedule-button"
     >
-      Schedule an Meet
+      Schedule a Meeting
     </a>
   );
 };

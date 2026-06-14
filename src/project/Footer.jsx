@@ -2,7 +2,8 @@ import "./footersection.css";
 import SocialMediaIcons from "../header/SocialMediaIcons";
 
 const Footer = () => {
-  const handleScroll = (section) => {
+  const handleScroll = (e, section) => {
+    e.preventDefault();
     const sectionId = section.toLowerCase().replace(" ", "-");
     const element = document.getElementById(sectionId);
     if (element) {
@@ -29,16 +30,20 @@ const Footer = () => {
           <div className="footer-col">
             <h4 className="footer-col-heading">Quick Links</h4>
             <ul className="footer-nav">
-              {links.map((l) => (
-                <li key={l}>
-                  <span
-                    className="footer-nav-link"
-                    onClick={() => handleScroll(l)}
-                  >
-                    {l}
-                  </span>
-                </li>
-              ))}
+              {links.map((l) => {
+                const sectionId = l.toLowerCase().replace(" ", "-");
+                return (
+                  <li key={l}>
+                    <a
+                      href={`#${sectionId}`}
+                      className="footer-nav-link"
+                      onClick={(e) => handleScroll(e, l)}
+                    >
+                      {l}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

@@ -10,7 +10,8 @@ const Navbar = ({
       "https://s3.ap-south-1.amazonaws.com/developerlucky.in/LuckyMourya.pdf";
     window.open(cvUrl, "_blank");
   };
-  const handleScroll = (section) => {
+  const handleScroll = (e, section) => {
+    e.preventDefault();
     const sectionId = section.toLowerCase().replace(" ", "-");
     const element = document.getElementById(sectionId);
     if (element) {
@@ -23,15 +24,19 @@ const Navbar = ({
   return (
     <nav className="navbar-container">
       <div className="menu-items">
-        {menuItems.map((item) => (
-          <a
-            onClick={() => handleScroll(item)}
-            key={item}
-            className="menu-link"
-          >
-            {item}
-          </a>
-        ))}
+        {menuItems.map((item) => {
+          const sectionId = item.toLowerCase().replace(" ", "-");
+          return (
+            <a
+              href={`#${sectionId}`}
+              onClick={(e) => handleScroll(e, item)}
+              key={item}
+              className="menu-link"
+            >
+              {item}
+            </a>
+          );
+        })}
       </div>
 
       <button className="download-btn" onClick={handleDownload}>

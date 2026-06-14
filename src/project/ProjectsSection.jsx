@@ -217,9 +217,9 @@ const ProjectsSection = () => {
   return (
     <section className="projects-section" id="projects">
       <div className="section-header">
-        <h1 className="section-title animate-slide-in">
+        <h2 className="section-title animate-slide-in">
           <span className="highlight">Development</span> Journey
-        </h1>
+        </h2>
         <p className="section-subtitle animate-slide-in">
           I&apos;ve built and shipped production mobile apps, backend systems,
           and freelance client work across React Native, React, Django, Spring
@@ -269,8 +269,12 @@ const ProjectsSection = () => {
               <img
                 style={{ backgroundColor: project.color }}
                 src={project.image}
-                alt={project.title}
+                alt={`Screenshot or icon of ${project.title}`}
                 className="project-image"
+                width="400"
+                height="200"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 

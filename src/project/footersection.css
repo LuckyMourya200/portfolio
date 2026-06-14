@@ -473,6 +473,7 @@
     color 0.2s ease,
     padding-left 0.2s ease;
   display: inline-block;
+  text-decoration: none;
 }
 
 .footer-nav-link:hover {
@@ -495,12 +496,15 @@
 }
 
 /* Social icons inside footer — smaller */
-.footer-root .social-media-container {
+.footer-root .social-icons {
   gap: 0.6rem;
   margin: 0;
+  margin-top: 0;
+  justify-content: flex-start;
+  width: fit-content;
 }
 
-.footer-root .social-media-icon {
+.footer-root .social-icon {
   width: 36px;
   height: 36px;
   background: #eee;
@@ -568,7 +572,7 @@
     padding-left: 0;
   }
 
-  .footer-root .social-media-container {
+  .footer-root .social-icons {
     justify-content: center;
   }
 
@@ -693,18 +697,20 @@
 }
 
 /* Override social icon container if needed */
-.social-media-container {
+.footer-root .social-icons {
   display: flex;
   gap: 1rem;
 }
 
-.social-media-icon img {
+.footer-root .social-icon img,
+.footer-root .social-icon svg {
   width: 24px;
   height: 24px;
   transition: transform 0.3s ease;
 }
 
-.social-media-icon:hover img {
+.footer-root .social-icon:hover img,
+.footer-root .social-icon:hover svg {
   transform: translateY(-3px);
 }
 
@@ -760,7 +766,7 @@
   }
 
   /* Inherit component style override */
-  .social-icons-wrapper .social-media-container {
+  .social-icons-wrapper .social-icons {
     justify-content: center !important;
   }
 
