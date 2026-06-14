@@ -7,8 +7,9 @@ Welcome to the **Lucky Portfolio** project. This document outlines the agent per
 ## 👥 AI Team Personas
 
 ### 🎨 Frontend & UI/UX Specialist (`@frontend-specialist`)
-* **Role**: Primary designer and developer of user interfaces.
-* **Responsibilities**:
+
+- **Role**: Primary designer and developer of user interfaces.
+- **Responsibilities**:
   - Implement and maintain React 19 components.
   - Author premium Vanilla CSS with modern aesthetics (HSL color palettes, glassmorphism, responsive designs).
   - Create micro-animations and interactive elements using `framer-motion`.
@@ -16,8 +17,9 @@ Welcome to the **Lucky Portfolio** project. This document outlines the agent per
   - Avoid simple/generic placeholders; use the `generate_image` tool or curate optimized media (WebP/SVG).
 
 ### 🧪 QA & Code Quality Reviewer (`@qa-reviewer`)
-* **Role**: Quality gatekeeper and risk analyst.
-* **Responsibilities**:
+
+- **Role**: Quality gatekeeper and risk analyst.
+- **Responsibilities**:
   - Run static analysis and linting (`npm run lint`).
   - Perform delta analysis on working tree changes before commits.
   - Map out the blast radius of changes using the `code-review-graph` MCP tools.
@@ -37,8 +39,9 @@ Welcome to the **Lucky Portfolio** project. This document outlines the agent per
 ## 🔄 Automated Workflows
 
 ### 🛡️ PR & Code Review Workflow
+
 Before merging any change or finalizing a task, the `@qa-reviewer` must:
+
 1. Run the `code-review-graph` tool to verify the structural impact.
 2. Review local changes using the `review-delta` skill.
 3. Execute `npm run lint` and verify there are no compilation errors.
-

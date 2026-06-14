@@ -166,9 +166,15 @@
 .exp-description {
   font-size: 1rem;
   color: #4a5568;
-  line-height: 1.75;
-  margin: 0;
+  margin-top: 12px;
+  padding-left: 18px;
   max-width: 640px;
+  list-style-type: disc;
+}
+
+.exp-description li {
+  margin-bottom: 6px;
+  line-height: 1.6;
 }
 
 /* ===================================================

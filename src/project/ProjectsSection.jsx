@@ -23,7 +23,6 @@ const ProjectsSection = () => {
     const timer = setTimeout(() => setAnimate(false), 500);
     return () => clearTimeout(timer);
   }, [selectedCategory]);
-
   const projects = [
     {
       title: "Slayd",
@@ -44,13 +43,13 @@ const ProjectsSection = () => {
         },
       ],
       description:
-        "Mobile App Developer for a fashion commerce platform with React Native, React, Django, and Razorpay integration.",
+        "Built a fashion commerce app with React Native, React, Django, and Razorpay.",
       points: [
-        "Reduced re-renders by 30% and API calls by 35%, resulting in smoother UI and 20% fewer crashes",
-        "Built end-to-end Razorpay payment integration across React Native mobile and React web with Django APIs",
-        "Implemented scalable Redux state management, reducing navigation-driven bugs by 25%",
-        "Optimized product detail loading by 20%, deep-linking to 95%+, and analytics tracking by 30%",
-        "Resolved iOS layout and lifecycle issues, reducing platform-specific bugs by 40%"
+        "⚡ Cut re-renders by 30% and API calls by 35% for smoother performance",
+        "💳 Built Razorpay payments for mobile and web with Django APIs",
+        "🧠 Improved Redux flow and reduced navigation bugs by 25%",
+        "🔗 Boosted deep-link success to 95%+ and improved product loading by 20%",
+        "🍏 Fixed iOS layout and lifecycle bugs, cutting issues by 40%",
       ],
       color: "#ffffff",
       category: "Mobile Apps",
@@ -70,12 +69,12 @@ const ProjectsSection = () => {
         },
       ],
       description:
-        "Consumer social media app built with React Native, Firebase, and real-time communication features.",
+        "Built a social media app with React Native, Firebase, and real-time chat.",
       points: [
-        "Implemented Google Auth, Firebase Auth, FCM push notifications, and Google Analytics",
-        "Built real-time WebSocket chat feature with image manipulation and file upload flows",
-        "Migrated Expo SDK to latest version across both apps and managed end-to-end store submission",
-        "Shipped production app to both iOS App Store and Google Play Store"
+        "🔐 Added Google Auth, Firebase Auth, push notifications, and analytics",
+        "💬 Built real-time chat with image editing and file uploads",
+        "⬆️ Upgraded Expo SDK across iOS and Android",
+        "🚀 Shipped the app to both App Store and Play Store",
       ],
       color: "#ffffff",
       category: "Mobile Apps",
@@ -95,11 +94,11 @@ const ProjectsSection = () => {
         },
       ],
       description:
-        "Business companion app for PoppyGrid, managing customer-facing workflows, messaging, and media handling.",
+        "Built the business app for messaging, media handling, and customer workflows.",
       points: [
-        "Implemented Google Auth, Firebase Auth, push notifications, and analytics tracking",
-        "Built chat, image manipulation, and file upload flows matching the consumer app",
-        "Supported App Store and Play Store releases from scratch"
+        "🔐 Added Google Auth, Firebase Auth, push notifications, and analytics",
+        "💬 Built chat, image editing, and file upload flows",
+        "📦 Helped launch the app on App Store and Play Store",
       ],
       color: "#ffffff",
       category: "Mobile Apps",
@@ -107,7 +106,6 @@ const ProjectsSection = () => {
     {
       title: "Oaysis Social Media",
       image: oaysis,
-      link: "https://www.oaysis.com/",
       links: [
         {
           label: "Website",
@@ -119,18 +117,15 @@ const ProjectsSection = () => {
         },
       ],
       description:
-        "Social media platform featuring an Instagram-style Stories experience.",
+        "Built an Instagram-style social media experience with stories and media tools.",
       points: [
-        "Built the interactive frontend workflow in React Native",
-        "Implemented image capture, editing, filters, and uploads",
-        "Delivered a complex feature that previous developers could not complete",
-        "Received a 5.0/5.0 Upwork rating and strong client recommendation",
+        "🎨 Added image capture, editing, filters, and uploads",
+        "✅ Finished a complex feature others could not complete",
+        "🏆 Earned a 5.0/5.0 Upwork rating and strong client feedback",
       ],
       color: "#ffffff",
       category: "Mobile Apps",
     },
-    
-  
     {
       title: "Codewords: Online Multiplayer",
       image:
@@ -142,11 +137,11 @@ const ProjectsSection = () => {
         },
       ],
       description:
-        "Real-time multiplayer spy party game inspired by Codenames.",
+        "Built a real-time multiplayer spy game inspired by Codenames.",
       points: [
-        "Built cross-platform iOS & Android game flows using React Native",
-        "Integrated Firebase Realtime Database and analytics to boost user engagement",
-        "Published app on Google Play Store, achieving 5K+ downloads"
+        "🎮 Built iOS and Android game flows with React Native",
+        "🔥 Used Firebase Realtime Database and analytics",
+        "📈 Published on Google Play with 5K+ downloads",
       ],
       color: "#f2f2f2",
       category: "Mobile Apps",
@@ -161,16 +156,17 @@ const ProjectsSection = () => {
           url: "https://play.google.com/store/apps/details?id=com.lazytrunk.thisorthat",
         },
       ],
-      description: "Fun and quirky question card game.",
+      description: "Built a fun question card game for mobile users.",
       points: [
-        "Designed and implemented game screens, card layouts, and offline/online question synchronization using React Native",
-        "Integrated Firebase analytics and in-app purchases, boosting user retention by 25%",
-        "Published app on Google Play Store, achieving 10K+ downloads"
+        "🃏 Designed game screens and card layouts in React Native",
+        "🔄 Built offline and online question sync",
+        "💰 Added Firebase analytics and in-app purchases",
+        "📈 Shipped the app with 10K+ downloads",
       ],
       color: "#fff2e2",
       category: "Mobile Apps",
     },
-      {
+    {
       title: "Ximkart Backend",
       image: backend,
       links: [
@@ -180,12 +176,12 @@ const ProjectsSection = () => {
         },
       ],
       description:
-        "Spring Boot microservices backend for the Ximkart platform with government API integrations for E-Way Bill processing.",
+        "Built Spring Boot Backend for E-Way Bill and core backend APIs.",
       points: [
-        "Worked on Java 17 Spring Boot and PostgreSQL microservices codebase",
-        "Refactored credit notes, debit notes, and E-Way Bill APIs, eliminating duplicate logic with Java generics",
-        "Improved backend system maintainability by 60%",
-        "Integrated government APIs for E-Way Bill validation and creation via JWT-secured endpoints"
+        "☕ Worked on Java 17, Spring Boot, and PostgreSQL DataBase",
+        "🧩 Refactored credit note, debit note, and E-Way Bill APIs",
+        "⚙️ Removed duplicate logic with Java generics",
+        "🔐 Integrated government APIs with JWT-secured endpoints",
       ],
       color: "white",
       category: "Backend",
@@ -194,11 +190,11 @@ const ProjectsSection = () => {
       title: "Adarth Backend",
       image: adarth,
       description:
-        "NestJS backend for ad campaign management and analytics, optimized for high-throughput production use.",
+        "Built a fast backend for ad campaigns, reports, and analytics.",
       points: [
-        "Developed and deployed campaign microservices using NestJS and MongoDB",
-        "Optimized MongoDB Aggregation Pipelines, cutting report generation time by 50%",
-        "Deployed services using Docker and AWS EC2 with NGINX, establishing a reproducible CI/CD pipeline"
+        "🛠️ Built Backend with NestJS and MongoDB",
+        "⚡ Cut report generation time by 50%",
+        "🚀 Deployed with Docker, AWS EC2, and NGINX",
       ],
       color: "white",
       category: "Backend",

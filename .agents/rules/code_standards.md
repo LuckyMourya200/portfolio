@@ -21,7 +21,6 @@ This document establishes the code quality, formatting, naming conventions, and 
 
 1. **Components**:
    - Use PascalCase for component files and component function declarations (e.g., `ProjectCard.jsx`, `function ProjectCard()`).
-   
 2. **Hooks**:
    - Always prefix custom hooks with `use` and write in camelCase (e.g., `useScrollDirection.js`).
 
@@ -39,7 +38,6 @@ This document establishes the code quality, formatting, naming conventions, and 
 
 1. **Ref & DOM Access**:
    - In React 19, `ref` can be passed directly as a prop without requiring `forwardRef`. Follow this modern standard when building components.
-   
 2. **Performance Optimization**:
    - Use `useMemo` for expensive computed arrays or lists (e.g., filtering project tags).
    - Use `useCallback` for event handlers passed down to deeply nested child components to prevent unnecessary re-renders.

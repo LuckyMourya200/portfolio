@@ -36,26 +36,35 @@ A premium, modern developer portfolio website built using **React 19**, **Vite**
 ## 💻 Getting Started
 
 ### 1. Installation
+
 To install the required project dependencies, run:
+
 ```bash
 npm install
 ```
 
 ### 2. Development Server
+
 To launch the Vite hot-reloading development server locally:
+
 ```bash
 npm run dev
 ```
 
 ### 3. Static Code Analysis
+
 To run ESLint and inspect the code for syntax or styling errors:
+
 ```bash
 npm run lint
 ```
 
 ### 4. Compile Production Build
+
 To build and optimize static assets for production:
+
 ```bash
 npm run build
 ```
+
 The resulting build directory will be exported to `/dist`.
