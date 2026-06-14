@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import "./Home.css";
 
-const SocialMediaIcons = ({ style }) => {
+const SocialMediaIcons = ({ style, idPrefix = "social" }) => {
   const icons = [
     {
       id: "linkedin",
@@ -136,6 +136,7 @@ const SocialMediaIcons = ({ style }) => {
       {icons.map((icon) => (
         <a
           key={icon.id}
+          id={`${idPrefix}-${icon.id}`}
           href={icon.url}
           target="_blank"
           rel="noopener noreferrer"
@@ -151,6 +152,7 @@ const SocialMediaIcons = ({ style }) => {
 
 SocialMediaIcons.propTypes = {
   style: PropTypes.object,
+  idPrefix: PropTypes.string,
 };
 
 export default SocialMediaIcons;

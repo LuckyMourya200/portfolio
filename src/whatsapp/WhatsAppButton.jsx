@@ -16,6 +16,7 @@ const WhatsAppButton = () => {
   return (
     <div className="whatsapp-button">
       <a
+        id="whatsapp-floating-btn"
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"

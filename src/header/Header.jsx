@@ -6,7 +6,6 @@ import { track } from "@vercel/analytics/react";
 const Header = () => {
   const handleConnectClick = () => {
     track("Contacted via Email");
-    window.location = "mailto:hello@developerlucky.in";
   };
 
   return (
@@ -17,8 +16,8 @@ const Header = () => {
           <h1 className="name">Lucky Mourya</h1>
 
           <div className="title-wrapper">
-            <h1 className="main-title">Full Stack</h1>
-            <h1 className="main-title offset">Developer</h1>
+            <h2 className="main-title">Full Stack</h2>
+            <h2 className="main-title offset">Developer</h2>
           </div>
 
           <p className="description">
@@ -27,9 +26,15 @@ const Header = () => {
             scalable backend systems, and high-performance digital products.
           </p>
 
-          <button onClick={handleConnectClick} className="hire-btn">
+          <a
+            id="header-btn-connect"
+            href="mailto:hello@developerlucky.in"
+            onClick={handleConnectClick}
+            className="hire-btn"
+            style={{ textDecoration: "none", display: "inline-block" }}
+          >
             Let&apos;s Connect
-          </button>
+          </a>
         </div>
 
         <div className="image-wrapper">
@@ -42,7 +47,7 @@ const Header = () => {
             fetchPriority="high"
             decoding="async"
           />
-          <SocialMediaIcons />
+          <SocialMediaIcons idPrefix="social-header" />
         </div>
       </header>
     </section>

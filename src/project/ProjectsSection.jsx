@@ -229,16 +229,16 @@ const ProjectsSection = () => {
 
       <div className="journey-highlights">
         <div className="highlight-card animate-fade-in">
-          <h3>2+ Years</h3>
-          <p>Professional Development Experience</p>
+          <div className="highlight-number">2+ Years</div>
+          <p className="highlight-label">Professional Development Experience</p>
         </div>
         <div className="highlight-card animate-fade-in">
-          <h3>15K+</h3>
-          <p>Mobile App Downloads</p>
+          <div className="highlight-number">15K+</div>
+          <p className="highlight-label">Mobile App Downloads</p>
         </div>
         <div className="highlight-card animate-fade-in">
-          <h3>6+</h3>
-          <p>Production Projects Delivered</p>
+          <div className="highlight-number">6+</div>
+          <p className="highlight-label">Production Projects Delivered</p>
         </div>
       </div>
 
@@ -246,6 +246,7 @@ const ProjectsSection = () => {
         {categories.map((category) => (
           <button
             key={category.id}
+            id={`project-category-btn-${category.name.toLowerCase().replace(" ", "-")}`}
             onClick={() => handleCategoryClick(category.name)}
             className={`category-button ${animate ? "scale-up" : ""}`}
             style={{
@@ -296,6 +297,7 @@ const ProjectsSection = () => {
                 {project.links?.map((item) => (
                   <a
                     key={item.label}
+                    id={`project-link-${project.title.toLowerCase().replace(/[^a-z0-9]/g, "-")}-${item.label.toLowerCase().replace(/[^a-z0-9]/g, "-")}`}
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"

@@ -66,6 +66,19 @@
   transform: translateY(20px);
 }
 
+.highlight-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff6300;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-label {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
 .categories-menu {
   display: flex;
   gap: 1rem;

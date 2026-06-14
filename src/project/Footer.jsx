@@ -36,6 +36,7 @@ const Footer = () => {
                   <li key={l}>
                     <a
                       href={`#${sectionId}`}
+                      id={`footer-link-${sectionId}`}
                       className="footer-nav-link"
                       onClick={(e) => handleScroll(e, l)}
                     >
@@ -50,8 +51,12 @@ const Footer = () => {
           {/* Connect */}
           <div className="footer-col">
             <h4 className="footer-col-heading">Connect</h4>
-            <SocialMediaIcons />
-            <a href="mailto:hello@developerlucky.in" className="footer-email">
+            <SocialMediaIcons idPrefix="social-footer" />
+            <a
+              id="footer-email-link"
+              href="mailto:hello@developerlucky.in"
+              className="footer-email"
+            >
               hello@developerlucky.in
             </a>
           </div>

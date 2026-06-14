@@ -29,6 +29,7 @@ const Navbar = ({
           return (
             <a
               href={`#${sectionId}`}
+              id={`nav-link-${sectionId}`}
               onClick={(e) => handleScroll(e, item)}
               key={item}
               className="menu-link"
@@ -39,7 +40,11 @@ const Navbar = ({
         })}
       </div>
 
-      <button className="download-btn" onClick={handleDownload}>
+      <button
+        id="nav-btn-resume"
+        className="download-btn"
+        onClick={handleDownload}
+      >
         {buttonText}
       </button>
     </nav>

@@ -5,6 +5,7 @@ const ScheduleButton = () => {
 
   return (
     <a
+      id="contact-btn-schedule"
       href={calendlyUrl}
       target="_blank"
       rel="noopener noreferrer"
