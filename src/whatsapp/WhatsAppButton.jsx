@@ -1,4 +1,4 @@
-import whatsapp from "../assets/whatsapp.png";
+import whatsapp from "../assets/whatsapp.webp";
 import "./whatsapp.css";
 import { track } from "@vercel/analytics/react";
 
@@ -11,7 +11,7 @@ const WhatsAppButton = () => {
   )}`;
 
   const handleWhatsAppClick = () => {
-    track('Contacted via WhatsApp');
+    track("Contacted via WhatsApp");
   };
 
   return (

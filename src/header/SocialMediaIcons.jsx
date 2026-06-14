@@ -1,4 +1,4 @@
-import TwitterIcon from "../assets/twitter.png";
+import TwitterIcon from "../assets/twitter.webp";
 import InstagramIcon from "../assets/Instagram.png";
 import LinkedinIcon from "../assets/Linkedin.png";
 import GithubIcon from "../assets/github.png";

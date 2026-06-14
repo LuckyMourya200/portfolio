@@ -17,7 +17,7 @@ const services = [
     icon: MobileIcon,
     title: "Mobile App Development",
     description:
-      "Build cross-platform apps with React Native. Published 4+ Play Store apps with 10K+ downloads, integrated Firebase analytics.",
+      "Build cross-platform apps with React Native. Published 4+ Play Store apps with 15K+ downloads, integrated Firebase analytics.",
   },
   {
     icon: BackendIcon,

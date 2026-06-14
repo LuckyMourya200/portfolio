@@ -5,7 +5,7 @@ import { track } from "@vercel/analytics/react";
 
 const Header = () => {
   const handleConnectClick = () => {
-    track('Contacted via Email');
+    track("Contacted via Email");
     window.location = "mailto:hello@developerlucky.in";
   };
 
@@ -22,15 +22,12 @@ const Header = () => {
           </div>
 
           <p className="description">
-            I&apos;m a BTech CS student and Full Stack Developer with 2+ years
-            of experience building scalable digital products and end-to-end
-            solutions that create real impact.
+            I&apos;m a React Native &amp; Full Stack Developer with 2+ years of
+            experience building and shipping production mobile applications,
+            scalable backend systems, and high-performance digital products.
           </p>
 
-          <button
-            onClick={handleConnectClick}
-            className="hire-btn"
-          >
+          <button onClick={handleConnectClick} className="hire-btn">
             Let&apos;s Connect
           </button>
         </div>

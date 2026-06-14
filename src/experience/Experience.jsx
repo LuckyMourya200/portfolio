@@ -3,25 +3,25 @@ import "./experience.css";
 
 const experiences = [
   {
-    duration: "2025 Jul — Present",
+    duration: "June 2025 — Present",
     role: "Mobile App Developer",
-    company: "Slayd",
+    company: "Slayd Tech",
     description:
-      "Building a production React Native app with embedded AI/ML capabilities, integrating a Python-based backend to deliver smart, real-time features. Drove frontend performance optimization that reduced load times and elevated user retention through seamless AI-assisted interactions.",
+      "Optimized React Native app performance, reducing re-renders by 30% and redundant API calls by 35% to achieve smoother UI and 20% fewer crashes. Built end-to-end Razorpay payment integrations across mobile and web with Django APIs. Engineered admin dashboards, cart, and project features. Boosted product detail load speeds by 20%, deep-linking reliability to 95%+, and analytics tracking accuracy by 30%.",
   },
   {
-    duration: "2024 May — 2024 Sep",
+    duration: "Sep 2024 — May 2025",
     role: "Full Stack Developer Intern",
     company: "Acumensa Technologies",
     description:
-      "Engineered scalable full-stack web applications using Nest.js and React, designing complex MongoDB aggregation pipelines that cut query times significantly. Delivered a critical Government API integration (E-Way Bill system) with JWT-secured Spring Boot endpoints, enabling compliance-ready enterprise workflows.",
+      "Developed and deployed microservices using Docker and AWS EC2 with NGINX, establishing a robust CI/CD pipeline. Enhanced campaign reporting with complex MongoDB Aggregation Pipelines, cutting report generation times by 50%. Refactored Spring Boot backend APIs using Java generics, improving maintainability by 60%. Integrated JWT-secured E-Way Bill compliance workflows.",
   },
   {
-    duration: "2024 May — 2024 Sep",
+    duration: "May 2024 — Sep 2024",
     role: "React Native Developer Intern",
     company: "Lazy Trunk",
     description:
-      "Shipped 4+ cross-platform mobile applications to the Google Play Store, collectively surpassing 10K+ downloads. Integrated Firebase Analytics and real-time data pipelines to drive data-informed product decisions, while maintaining clean, component-driven React Native codebases.",
+      "Built cross-platform iOS & Android games using React Native and Firebase, integrating analytics and in-app purchases to boost user retention by 25%. Shipped Codewords (5K+ downloads) and This or That (10K+ downloads) to the Google Play Store, surpassing 15K+ collective downloads.",
   },
 ];
 
