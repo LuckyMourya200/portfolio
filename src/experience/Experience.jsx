@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import "./experience.css";
 
 const experiences = [
@@ -67,6 +68,16 @@ const TimelineItem = ({ exp, index }) => {
       </div>
     </div>
   );
+};
+
+TimelineItem.propTypes = {
+  exp: PropTypes.shape({
+    duration: PropTypes.string.isRequired,
+    role: PropTypes.string.isRequired,
+    company: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+  index: PropTypes.number.isRequired,
 };
 
 const Experience = () => {

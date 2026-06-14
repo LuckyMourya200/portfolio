@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectsSection from "./ProjectsSection";
 import ContactUsSection from "./ContactUsSection";
 import Footer from "./Footer";

@@ -1,7 +1,9 @@
 import TwitterIcon from "../assets/twitter.webp";
+import PropTypes from "prop-types";
 import InstagramIcon from "../assets/Instagram.png";
 import LinkedinIcon from "../assets/Linkedin.png";
 import GithubIcon from "../assets/github.png";
+import UpworkIcon from "../assets/upwork.png";
 
 import "./Home.css";
 
@@ -12,6 +14,12 @@ const SocialMediaIcons = ({ style }) => {
       url: "https://www.linkedin.com/in/lucky-mourya-968b6126b/",
       alt: "LinkedIn",
       src: LinkedinIcon,
+    },
+    {
+      id: "upwork",
+      url: "https://www.upwork.com/freelancers/~010bd78117629f4623",
+      alt: "Upwork",
+      src: UpworkIcon,
     },
 
     {
@@ -49,6 +57,10 @@ const SocialMediaIcons = ({ style }) => {
       ))}
     </div>
   );
+};
+
+SocialMediaIcons.propTypes = {
+  style: PropTypes.object,
 };
 
 export default SocialMediaIcons;

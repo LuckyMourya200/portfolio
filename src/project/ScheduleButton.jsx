@@ -1,5 +1,4 @@
 import "./footersection.css";
-import React from "react";
 
 const ScheduleButton = () => {
   const calendlyUrl = "https://calendly.com/luckymourya9000/30min";

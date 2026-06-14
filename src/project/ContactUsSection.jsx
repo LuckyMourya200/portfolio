@@ -1,4 +1,3 @@
-import React from "react";
 import "./footersection.css";
 import ScheduleButton from "./ScheduleButton";
 

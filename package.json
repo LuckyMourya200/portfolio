@@ -13,6 +13,7 @@
     "@vercel/analytics": "^2.0.1",
     "framer-motion": "^12.6.3",
     "portfolio": "file:",
+    "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-intersection-observer": "^9.16.0"

@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import "./aboutme.css";
 
 import FullIcon from "../assets/icons/icon_fullstack.png";
@@ -37,6 +38,7 @@ const ServiceCard = ({ icon, title, description, index }) => {
   const cardRef = useRef(null);
 
   useEffect(() => {
+    const currentCard = cardRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -45,9 +47,9 @@ const ServiceCard = ({ icon, title, description, index }) => {
       },
       { threshold: 0.15 },
     );
-    if (cardRef.current) observer.observe(cardRef.current);
+    if (currentCard) observer.observe(currentCard);
     return () => {
-      if (cardRef.current) observer.unobserve(cardRef.current);
+      if (currentCard) observer.unobserve(currentCard);
     };
   }, []);
 
@@ -66,10 +68,18 @@ const ServiceCard = ({ icon, title, description, index }) => {
   );
 };
 
+ServiceCard.propTypes = {
+  icon: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
+};
+
 const AboutSection = () => {
   const textRef = useRef(null);
 
   useEffect(() => {
+    const currentText = textRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -78,9 +88,9 @@ const AboutSection = () => {
       },
       { threshold: 0.2 },
     );
-    if (textRef.current) observer.observe(textRef.current);
+    if (currentText) observer.observe(currentText);
     return () => {
-      if (textRef.current) observer.unobserve(textRef.current);
+      if (currentText) observer.unobserve(currentText);
     };
   }, []);
 

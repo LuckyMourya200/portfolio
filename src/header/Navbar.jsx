@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import "./Home.css";
 
 const Navbar = ({
@@ -39,6 +39,11 @@ const Navbar = ({
       </button>
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  menuItems: PropTypes.arrayOf(PropTypes.string),
+  buttonText: PropTypes.string,
 };
 
 export default Navbar;

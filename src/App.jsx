@@ -1,4 +1,3 @@
-import React from "react";
 import Home from "./header/Home";
 import AboutMeComponent from "./aboutme/AboutMeComponent";
 import WhatsAppButton from "./whatsapp/WhatsAppButton";
