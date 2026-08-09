@@ -1,8 +1,11 @@
+import Navbar from "./components/common/Navbar";
 import Home from "./sections/hero/Home";
-import AboutMeComponent from "./sections/about/AboutMeComponent";
-import WhatsAppButton from "./components/common/WhatsAppButton";
-import FootersectionScreeen from "./sections/projects/FootersectionScreeen";
+import ProjectsSection from "./sections/projects/ProjectsSection";
 import Experience from "./sections/experience/Experience";
+import AboutSection from "./sections/about/AboutSection";
+import ContactUsSection from "./sections/contact/ContactUsSection";
+import Footer from "./components/layout/Footer";
+import WhatsAppButton from "./components/common/WhatsAppButton";
 import { Analytics } from "@vercel/analytics/react";
 
 const SectionDivider = () => (
@@ -10,8 +13,7 @@ const SectionDivider = () => (
     style={{
       height: "1px",
       width: "100%",
-      background:
-        "linear-gradient(to right, rgba(226, 232, 240, 0), rgba(226, 232, 240, 1), rgba(226, 232, 240, 0))",
+      background: "var(--border-subtle)",
       margin: "0 auto",
     }}
   />
@@ -19,14 +21,18 @@ const SectionDivider = () => (
 
 function App() {
   return (
-    <div style={{ backgroundColor: "white" }}>
+    <div style={{ backgroundColor: "var(--bg-primary)" }}>
+      <Navbar />
       <Home />
       <SectionDivider />
-      <AboutMeComponent />
+      <ProjectsSection />
       <SectionDivider />
       <Experience />
       <SectionDivider />
-      <FootersectionScreeen />
+      <AboutSection />
+      <SectionDivider />
+      <ContactUsSection />
+      <Footer />
       <WhatsAppButton />
       <Analytics />
     </div>

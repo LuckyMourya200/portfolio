@@ -1,0 +1,18 @@
+.section-wrapper {
+  padding: var(--space-24) var(--space-6);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.section-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .section-wrapper {
+    padding: var(--space-12) var(--space-4);
+  }
+}

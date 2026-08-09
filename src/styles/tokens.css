@@ -1,0 +1,45 @@
+:root {
+  /* Color System */
+  --bg-primary: #ffffff;
+  --bg-surface: #f5f5f7;
+  --bg-elevated: rgba(255, 255, 255, 0.7);
+  
+  --text-primary: #1d1d1f;
+  --text-secondary: #86868b;
+  
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  
+  --accent-primary: #ff6b00;
+  --accent-hover: #e56000;
+  --accent-ghost: rgba(255, 107, 0, 0.1);
+
+  /* Spacing System (8px Grid) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* Radius System */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.04);
+  --shadow-floating: 0 12px 32px rgba(0, 0, 0, 0.08);
+
+  /* Transitions */
+  --spring-easing: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.2s ease;
+  --transition-spring: 0.4s var(--spring-easing);
+  
+  /* Typography Variables */
+  --font-family-base: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+}

@@ -217,3 +217,96 @@ All static media assets live in `src/assets/`:
 - When adding reusable UI buttons, modals, or controls, place them in `src/components/common/`.
 - Ensure all relative import paths to assets and section stylesheets are updated correctly after file movements.
 - Validate changes by running `npm run styles:check`, `npm run lint`, and `npm run build`.
+
+---
+
+## 12. Forensic Design Audit Summary (2026-08-10)
+
+A comprehensive design audit evaluated the portfolio against Apple Design principles (`apple-design` skill):
+
+- **Core Verdict**: The codebase relies on ad-hoc CSS magic numbers, 7 distinct shades of orange, 8 body text grays, 6 border radii, broken mobile navigation (hidden menu without drawer), un-imported `Inter` font in Experience section causing system fallbacks, fragile `.offset { margin-left: 30%; }` text layout hacks in Hero, raw emojis in project cards, and un-coordinated container widths (`1440px`, `1412px`, `1200px`, `932px`, `860px`).
+- **Apple-Design Score**: Overall **3/10**. Key gaps include lack of spring physics, zero translucent materials/`backdrop-filter`, missing `@media (prefers-reduced-motion)` support, and lack of optical typography tracking.
+- **Action Plan**: Future redesign must establish a unified token system (`:root`), unified typography stack, responsive translucent top navigation with mobile sheet, cohesive dark/light material depth, spring-based micro-interactions, and professional engineering showcase cards without raw emojis.
+
+---
+
+## 13. Redesign Implementation Roadmap (2026-08-10)
+
+The finalized design direction transforms the portfolio into a premium, Apple-inspired experience that positions the owner as a Principal/Senior Engineer. It mandates a shift from noisy "vibe coding" to extreme restraint, optical alignment, typography-driven hierarchy, and physical motion.
+
+**Key Technical & Design Constraints:**
+1. **Tokens Over Magic Numbers**: ALL styling must use a new `:root` CSS variable system (`tokens.css`) defining exact color, spacing (8px grid), and radius semantics.
+2. **Typography**: Adopt `system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif`. Use negative tracking (`-0.03em`) on display headers and precise line heights.
+3. **Motion**: Implement instant pointer-down scale (`transform: scale(0.97)`). Use interruptible cubic-bezier transitions (`0.4s cubic-bezier(0.16, 1, 0.3, 1)`) mimicking critically damped springs. Provide global `@media (prefers-reduced-motion: reduce)` support.
+4. **Layout**: Consolidate sections into a unified `SectionWrapper` with a consistent `1200px` max-width. Fix the broken mobile navigation by implementing a translucent sticky top bar with a fluid mobile drawer.
+5. **Projects Presentation**: Remove raw emojis from text. Use editorial layouts with unified 4:3 image aspect ratios on subtle `--bg-surface` cards. Move Projects higher in the page hierarchy (below Hero).
+6. **No Breakage**: Vercel `@vercel/analytics` `onClick` handlers and all specific `id` attributes must remain perfectly intact.
+
+**Implementation Phases:**
+- **Phase 1 (Foundation)**: Create `styles/tokens.css` and `styles/global.css`.
+- **Phase 2 (Layout)**: Build new sticky `Navbar.jsx` with mobile sheet and `SectionWrapper.jsx`.
+- **Phase 3 (Hero & Typography)**: Refactor Hero to remove fragile `margin-left: 30%` hack.
+- **Phase 4 (Projects)**: Redesign project cards into premium technical case studies.
+- **Phase 5 (Experience & About)**: Clean up timelines and competency grids.
+## 14. Final Architecture (2026-08-10 Redesign)
+
+The application now utilizes a global `SectionWrapper` constraint for consistent maximum width (`1200px`) and centered alignment.
+The root layout in `App.jsx` cleanly composes:
+- `Navbar` (Sticky, translucent, with mobile drawer)
+- `Home` (Hero section)
+- `ProjectsSection` (Elevated in priority, editorial grid)
+- `Experience`
+- `AboutSection`
+- `ContactUsSection`
+- `Footer`
+
+## 15. Design System
+
+- **Typography**: A unified native font stack (`system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`) is defined in `styles/global.css`. Negative tracking (`-0.03em`) is used on display headers.
+- **Colors**: Defined in `styles/tokens.css` as semantic variables (`--bg-primary`, `--bg-surface`, `--text-primary`, `--text-secondary`, `--border-subtle`, `--accent-primary`).
+- **Spacing**: An 8px linear grid is mapped to variables (`--space-2` through `--space-24`).
+- **Radius**: Apple-style continuous corners (squircles) approximated via `--radius-sm`, `--radius-md`, `--radius-lg`.
+- **Shadows**: Soft, multi-layered diffusion shadows (`--shadow-card`, `--shadow-float`) replace harsh drop shadows.
+- **Motion**: Critically damped spring physics are used for all transitions (`--transition-spring: 0.4s cubic-bezier(0.16, 1, 0.3, 1)`).
+
+## 16. Component Responsibilities
+
+- **`SectionWrapper.jsx`**: The foundational layout primitive ensuring every section has identical padding and maximum width constraints.
+- **`Navbar.jsx`**: Manages window scroll state for visual changes (glassmorphism background) and local state for the mobile drawer. Contains smooth-scroll logic to `#ids`.
+
+## 17. Section Responsibilities
+
+- **Projects (`ProjectsSection.jsx`)**: Showcases technical case studies. Uses a 4:3 aspect ratio grid and bulleted technical accomplishments instead of generic emoji descriptions.
+- **Experience (`Experience.jsx`)**: Uses `IntersectionObserver` to trigger sequential fade-in animations on timeline nodes.
+
+## 18. Important Design Decisions
+
+- **No Magic Numbers**: ALL hardcoded pixels in CSS must be replaced with a `var(--space-*)` or `var(--radius-*)` token.
+- **Backdrop Filters**: Overlays and sticky navigation bars rely on `backdrop-filter: blur(20px)` and semi-transparent backgrounds to simulate glass/material depth.
+- **No Emojis**: Emojis were stripped from project and capability descriptions to maintain an editorial, senior-level tone.
+- **Accessibility**: A global `:focus-visible` outline is enforced, and `@media (prefers-reduced-motion: reduce)` globally disables all CSS animations and transitions for users who request it.
+
+## 19. Motion Principles
+
+- **Pointer Feedback**: Interactive elements (buttons, project cards, social icons) use `:active { transform: scale(0.97); }` to simulate physical hardware resistance when tapped.
+- **Interruptibility**: Animations strictly use `transition` instead of CSS `@keyframes` where possible so that user interaction can interrupt them seamlessly (e.g., hovering off a card midway through its hover animation).
+
+## 20. Responsive Rules
+
+- **Mobile First**: The base CSS targets mobile layouts.
+- **Breakpoints**: 
+  - `<= 480px`: Single column layouts.
+  - `<= 768px`: Tablet refinements (tighter padding).
+  - `<= 1024px`: Breakpoints for 2-column to 1-column grid shifts.
+- **Fluid Drawer**: The mobile menu uses a side-sheet that slides in rather than abruptly displaying a stacked list.
+
+## 21. Completed Redesign
+
+The 6-phase Redesign Implementation Roadmap was fully executed:
+1. `tokens.css` and `global.css` were created and imported into `main.jsx`.
+2. Layouts were wrapped in `SectionWrapper` and `Navbar` was modernized.
+3. The Hero section `.offset` hacks were removed.
+4. Projects were redesigned into 4:3 cards and shifted up in the hierarchy.
+5. Experience timelines were simplified and About cards updated.
+6. Reduced motion and focus states were validated.
+The build runs perfectly and the design achieves a premium, Apple-inspired aesthetic.

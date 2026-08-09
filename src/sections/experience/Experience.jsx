@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
+import SectionWrapper from "../../components/layout/SectionWrapper";
 import "./experience.css";
 
 const experiences = [
@@ -46,7 +47,7 @@ const TimelineItem = ({ exp, index }) => {
           observer.unobserve(el);
         }
       },
-      { threshold: 0.18 },
+      { threshold: 0.18 }
     );
 
     observer.observe(el);
@@ -59,13 +60,11 @@ const TimelineItem = ({ exp, index }) => {
       ref={ref}
       style={{ transitionDelay: `${index * 80}ms` }}
     >
-      {/* Left — orange square + vertical line */}
       <div className="exp-marker">
         <div className="exp-square" />
         <div className="exp-line" />
       </div>
 
-      {/* Right — content */}
       <div className="exp-content">
         <span className="exp-duration">{exp.duration}</span>
         <h3 className="exp-role">{exp.role}</h3>
@@ -91,39 +90,19 @@ TimelineItem.propTypes = {
 };
 
 const Experience = () => {
-  const headerRef = useRef(null);
-
-  useEffect(() => {
-    const el = headerRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add("exp-header--visible");
-          observer.unobserve(el);
-        }
-      },
-      { threshold: 0.3 },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section className="exp-section" id="experience">
-      <div className="exp-container">
-        <div className="exp-header" ref={headerRef}>
-          <span className="exp-label">Professional Journey</span>
-          <h2 className="exp-title">Experience</h2>
-        </div>
-
-        <div className="exp-timeline">
-          {experiences.map((exp, i) => (
-            <TimelineItem key={i} exp={exp} index={i} />
-          ))}
-        </div>
+    <SectionWrapper id="experience" className="exp-section">
+      <div className="exp-header">
+        <span className="exp-label">Professional Journey</span>
+        <h2 className="exp-title">Experience</h2>
       </div>
-    </section>
+
+      <div className="exp-timeline">
+        {experiences.map((exp, i) => (
+          <TimelineItem key={i} exp={exp} index={i} />
+        ))}
+      </div>
+    </SectionWrapper>
   );
 };
 

@@ -1,5 +1,6 @@
 import profileImage from "../../assets/images/profile.webp";
 import SocialMediaIcons from "../../components/common/SocialMediaIcons";
+import SectionWrapper from "../../components/layout/SectionWrapper";
 import "./Home.css";
 import { track } from "@vercel/analytics/react";
 
@@ -9,48 +10,40 @@ const Header = () => {
   };
 
   return (
-    <section id="home">
-      <header className="header-container">
-        <div className="header-content">
-          <span className="greeting">Hi, I’m</span>
-          <h1 className="name">Lucky Mourya</h1>
-
-          <div className="title-wrapper">
-            <h2 className="main-title">Full Stack</h2>
-            <h2 className="main-title offset">Developer</h2>
-          </div>
-
-          <p className="description">
-            I&apos;m a React Native &amp; Full Stack Developer with 2+ years of
-            experience building and shipping production mobile applications,
-            scalable backend systems, and high-performance digital products.
+    <SectionWrapper id="home" className="hero-section">
+      <div className="hero-container">
+        <div className="hero-content">
+          <h1 className="hero-title">Lucky Mourya</h1>
+          <h2 className="hero-subtitle">Mobile & Full-Stack Developer</h2>
+          <p className="hero-description">
+            I build and ship production mobile applications, scalable backend systems, 
+            and high-performance digital products with a focus on deep technical execution.
           </p>
-
           <a
             id="header-btn-connect"
             href="mailto:hello@developerlucky.in"
             onClick={handleConnectClick}
-            className="hire-btn"
-            style={{ textDecoration: "none", display: "inline-block" }}
+            className="btn-primary"
           >
             Let&apos;s Connect
           </a>
         </div>
-
-        <div className="image-wrapper">
-          <img
-            src={profileImage}
-            alt="Profile of Lucky Mourya"
-            className="profile-image"
-            width="800"
-            height="696"
-            fetchPriority="high"
-            decoding="async"
-          />
+        <div className="hero-visual">
+          <div className="profile-image-container">
+            <img
+              src={profileImage}
+              alt="Profile of Lucky Mourya"
+              className="profile-image"
+              width="800"
+              height="696"
+              fetchPriority="high"
+              decoding="async"
+            />
+          </div>
           <SocialMediaIcons idPrefix="social-header" />
         </div>
-      </header>
-    </section>
+      </div>
+    </SectionWrapper>
   );
 };
 
