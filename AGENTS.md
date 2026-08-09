@@ -20,6 +20,7 @@ This document serves as the persistent architectural knowledge base and code-rev
 ## 2. Architecture
 
 The application follows a **Modular Section-Based Architecture**:
+
 - `src/App.jsx` acts as the single page root container, composing modular sections stacked vertically with thin divider lines (`SectionDivider`).
 - Each major area of the website is organized into its own feature folder inside `src/sections/` (Hero, About, Experience, Projects, Contact).
 - Shared, atomic controls (like buttons, social icon bars, and navigation links) live in `src/components/common/`.
@@ -79,57 +80,64 @@ portfolio/
 ## 4. File Responsibilities
 
 ### Core & Entry
+
 - **[`src/main.jsx`](file:///Users/luckymourya/Desktop/portfolio/src/main.jsx)**
-  - *Responsibility*: Renders `<App />` into the DOM root using React `StrictMode`.
+  - _Responsibility_: Renders `<App />` into the DOM root using React `StrictMode`.
 - **[`src/App.jsx`](file:///Users/luckymourya/Desktop/portfolio/src/App.jsx)**
-  - *Responsibility*: Assembles page sections in vertical order (`Home`, `AboutMeComponent`, `Experience`, `FootersectionScreeen`, floating `WhatsAppButton`, and Vercel `Analytics`).
-  - *Dependencies*: `src/sections/hero/Home.jsx`, `src/sections/about/AboutMeComponent.jsx`, `src/sections/experience/Experience.jsx`, `src/sections/projects/FootersectionScreeen.jsx`, `src/components/common/WhatsAppButton.jsx`.
+  - _Responsibility_: Assembles page sections in vertical order (`Home`, `AboutMeComponent`, `Experience`, `FootersectionScreeen`, floating `WhatsAppButton`, and Vercel `Analytics`).
+  - _Dependencies_: `src/sections/hero/Home.jsx`, `src/sections/about/AboutMeComponent.jsx`, `src/sections/experience/Experience.jsx`, `src/sections/projects/FootersectionScreeen.jsx`, `src/components/common/WhatsAppButton.jsx`.
 
 ### Common Components (`src/components/common/`)
+
 - **[`src/components/common/Navbar.jsx`](file:///Users/luckymourya/Desktop/portfolio/src/components/common/Navbar.jsx)**
-  - *Responsibility*: Renders top navigation menu items and smooth-scroll triggers + Resume download button.
+  - _Responsibility_: Renders top navigation menu items and smooth-scroll triggers + Resume download button.
 - **[`src/components/common/SocialMediaIcons.jsx`](file:///Users/luckymourya/Desktop/portfolio/src/components/common/SocialMediaIcons.jsx)**
-  - *Responsibility*: Renders social link icons (LinkedIn, Upwork, GitHub, Twitter, Instagram). Supports custom prefix IDs for analytics tracking.
+  - _Responsibility_: Renders social link icons (LinkedIn, Upwork, GitHub, Twitter, Instagram). Supports custom prefix IDs for analytics tracking.
 - **[`src/components/common/ScheduleButton.jsx`](file:///Users/luckymourya/Desktop/portfolio/src/components/common/ScheduleButton.jsx)**
-  - *Responsibility*: CTA button redirecting to Calendly meeting schedule URL.
+  - _Responsibility_: CTA button redirecting to Calendly meeting schedule URL.
 - **[`src/components/common/WhatsAppButton.jsx`](file:///Users/luckymourya/Desktop/portfolio/src/components/common/WhatsAppButton.jsx)**
-  - *Responsibility*: Floating WhatsApp CTA button pinned to bottom-right of viewport.
+  - _Responsibility_: Floating WhatsApp CTA button pinned to bottom-right of viewport.
 
 ### Layout (`src/components/layout/`)
+
 - **[`src/components/layout/Footer.jsx`](file:///Users/luckymourya/Desktop/portfolio/src/components/layout/Footer.jsx)**
-  - *Responsibility*: Page footer showing brand overview, navigation links, social icons, and copyright details.
+  - _Responsibility_: Page footer showing brand overview, navigation links, social icons, and copyright details.
 
 ### Hero Section (`src/sections/hero/`)
+
 - **[`src/sections/hero/Home.jsx`](file:///Users/luckymourya/Desktop/portfolio/src/sections/hero/Home.jsx)**
-  - *Responsibility*: Top wrapper component combining `Navbar` and `Header`.
+  - _Responsibility_: Top wrapper component combining `Navbar` and `Header`.
 - **[`src/sections/hero/Header.jsx`](file:///Users/luckymourya/Desktop/portfolio/src/sections/hero/Header.jsx)**
-  - *Responsibility*: Main hero banner presenting name, title, description, profile photo, social icons, and email CTA.
+  - _Responsibility_: Main hero banner presenting name, title, description, profile photo, social icons, and email CTA.
 - **[`src/sections/hero/Home.css`](file:///Users/luckymourya/Desktop/portfolio/src/sections/hero/Home.css)**
-  - *Responsibility*: Layout, typography, responsive media queries, and button styles for Hero and Navigation.
+  - _Responsibility_: Layout, typography, responsive media queries, and button styles for Hero and Navigation.
 
 ### About Section (`src/sections/about/`)
+
 - **[`src/sections/about/AboutMeComponent.jsx`](file:///Users/luckymourya/Desktop/portfolio/src/sections/about/AboutMeComponent.jsx)**
-  - *Responsibility*: Container section wrapper providing padding and width constraints for `AboutSection`.
+  - _Responsibility_: Container section wrapper providing padding and width constraints for `AboutSection`.
 - **[`src/sections/about/AboutSection.jsx`](file:///Users/luckymourya/Desktop/portfolio/src/sections/about/AboutSection.jsx)**
-  - *Responsibility*: Renders bio text column alongside a 2x2 grid of service cards with intersection observer reveal animations.
+  - _Responsibility_: Renders bio text column alongside a 2x2 grid of service cards with intersection observer reveal animations.
 - **[`src/sections/about/aboutme.css`](file:///Users/luckymourya/Desktop/portfolio/src/sections/about/aboutme.css)**
-  - *Responsibility*: Grid styles, card hover effects, card reveal animations, and responsive rules for About section.
+  - _Responsibility_: Grid styles, card hover effects, card reveal animations, and responsive rules for About section.
 
 ### Experience Section (`src/sections/experience/`)
+
 - **[`src/sections/experience/Experience.jsx`](file:///Users/luckymourya/Desktop/portfolio/src/sections/experience/Experience.jsx)**
-  - *Responsibility*: Interactive timeline presenting work history (Slayd Tech, Acumensa Technologies, Lazy Trunk). Uses `IntersectionObserver` to trigger timeline item animations.
+  - _Responsibility_: Interactive timeline presenting work history (Slayd Tech, Acumensa Technologies, Lazy Trunk). Uses `IntersectionObserver` to trigger timeline item animations.
 - **[`src/sections/experience/experience.css`](file:///Users/luckymourya/Desktop/portfolio/src/sections/experience/experience.css)**
-  - *Responsibility*: Timeline marker graphics, vertical line styling, and item entry transition rules.
+  - _Responsibility_: Timeline marker graphics, vertical line styling, and item entry transition rules.
 
 ### Projects & Contact Section (`src/sections/projects/` & `src/sections/contact/`)
+
 - **[`src/sections/projects/ProjectsSection.jsx`](file:///Users/luckymourya/Desktop/portfolio/src/sections/projects/ProjectsSection.jsx)**
-  - *Responsibility*: Portfolio project showcase with category filtering (All, Mobile Apps, Backend), metrics cards, project images, bullet points, and live links. Tracks project view events via Vercel Analytics.
+  - _Responsibility_: Portfolio project showcase with category filtering (All, Mobile Apps, Backend), metrics cards, project images, bullet points, and live links. Tracks project view events via Vercel Analytics.
 - **[`src/sections/projects/FootersectionScreeen.jsx`](file:///Users/luckymourya/Desktop/portfolio/src/sections/projects/FootersectionScreeen.jsx)**
-  - *Responsibility*: Bottom page section container composing `ProjectsSection`, `ContactUsSection`, and `Footer`.
+  - _Responsibility_: Bottom page section container composing `ProjectsSection`, `ContactUsSection`, and `Footer`.
 - **[`src/sections/projects/footersection.css`](file:///Users/luckymourya/Desktop/portfolio/src/sections/projects/footersection.css)**
-  - *Responsibility*: Card grid styles, category filter button styles, contact section layout, and footer styling.
+  - _Responsibility_: Card grid styles, category filter button styles, contact section layout, and footer styling.
 - **[`src/sections/contact/ContactUsSection.jsx`](file:///Users/luckymourya/Desktop/portfolio/src/sections/contact/ContactUsSection.jsx)**
-  - *Responsibility*: Contact section header inviting collaboration, embedding `ScheduleButton`.
+  - _Responsibility_: Contact section header inviting collaboration, embedding `ScheduleButton`.
 
 ---
 
@@ -158,6 +166,7 @@ App
 ## 6. Asset Organization
 
 All static media assets live in `src/assets/`:
+
 - **`src/assets/images/`**: General site images (e.g., `profile.webp`).
 - **`src/assets/projects/`**: Project thumbnails and screenshots (`adarth.webp`, `backend.webp`, `oaysis.webp`).
 - **`public/`**: Favicons, `manifest.json`, `robots.txt`, `sitemap.xml`, and open-graph metadata (`profile-og.webp`).
