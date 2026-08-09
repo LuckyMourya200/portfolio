@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./Home.css";
+import "../../sections/hero/Home.css";
 
 const SocialMediaIcons = ({ style, idPrefix = "social" }) => {
   const icons = [

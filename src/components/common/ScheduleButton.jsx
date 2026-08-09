@@ -1,4 +1,4 @@
-import "./footersection.css";
+import "../../sections/projects/footersection.css";
 
 const ScheduleButton = () => {
   const calendlyUrl = "https://calendly.com/luckymourya9000/30min";

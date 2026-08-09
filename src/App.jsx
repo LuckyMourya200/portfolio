@@ -1,8 +1,8 @@
-import Home from "./header/Home";
-import AboutMeComponent from "./aboutme/AboutMeComponent";
-import WhatsAppButton from "./whatsapp/WhatsAppButton";
-import FootersectionScreeen from "./project/FootersectionScreeen";
-import Experience from "./experience/Experience";
+import Home from "./sections/hero/Home";
+import AboutMeComponent from "./sections/about/AboutMeComponent";
+import WhatsAppButton from "./components/common/WhatsAppButton";
+import FootersectionScreeen from "./sections/projects/FootersectionScreeen";
+import Experience from "./sections/experience/Experience";
 import { Analytics } from "@vercel/analytics/react";
 
 const SectionDivider = () => (

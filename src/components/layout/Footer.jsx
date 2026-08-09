@@ -1,5 +1,5 @@
-import "./footersection.css";
-import SocialMediaIcons from "../header/SocialMediaIcons";
+import "../../sections/projects/footersection.css";
+import SocialMediaIcons from "../common/SocialMediaIcons";
 
 const Footer = () => {
   const handleScroll = (e, section) => {

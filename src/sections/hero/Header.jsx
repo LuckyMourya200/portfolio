@@ -1,5 +1,5 @@
-import profileImage from "../assets/profile.webp";
-import SocialMediaIcons from "./SocialMediaIcons";
+import profileImage from "../../assets/images/profile.webp";
+import SocialMediaIcons from "../../components/common/SocialMediaIcons";
 import "./Home.css";
 import { track } from "@vercel/analytics/react";
 

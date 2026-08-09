@@ -1,5 +1,5 @@
-import "./footersection.css";
-import ScheduleButton from "./ScheduleButton";
+import "../projects/footersection.css";
+import ScheduleButton from "../../components/common/ScheduleButton";
 
 const ContactUsSection = () => {
   return (

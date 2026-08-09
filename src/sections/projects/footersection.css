@@ -124,20 +124,7 @@
   object-fit: contain;
 }
 
-.video-thumbnail {
-  position: relative;
-  cursor: pointer;
-}
 
-.play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
-  color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
 
 .card-content {
   padding: 1.5rem;
@@ -212,16 +199,7 @@
   transform: translateY(-5px);
 }
 
-/* Staggered animations */
-.animate-card-0 {
-  animation-delay: 0.1s;
-}
-.animate-card-1 {
-  animation-delay: 0.2s;
-}
-.animate-card-2 {
-  animation-delay: 0.3s;
-}
+
 
 /* Add these changes to your existing CSS */
 
@@ -377,35 +355,7 @@
   margin-bottom: 3rem;
 }
 
-.contact-form {
-  display: flex;
-  gap: 1.5rem;
-  width: 100%;
-  max-width: 874px;
-}
 
-.contact-input {
-  width: 100%;
-  height: 4.7rem;
-  background: #f8f8f8;
-  border: 1px solid #afafaf;
-  border-radius: 0.9rem;
-  padding: 0 1.6rem;
-  font-size: 1.3rem;
-  color: #797979;
-}
-
-.contact-button {
-  background: #fd6f00;
-  color: #fff;
-  border: none;
-  border-radius: 0.9rem;
-  padding: 1.25rem 2.25rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
 
 /* ============================================================
    FOOTER — Professional redesign (single background, clean mobile)
@@ -523,12 +473,7 @@
   background: #eee;
 }
 
-/* ---- Divider ---- */
-.footer-divider {
-  margin: 2.5rem 0 1.25rem;
-  height: 1px;
-  background: #e0e0e0;
-}
+
 
 /* ---- Bottom bar ---- */
 .footer-bottom {
@@ -605,218 +550,15 @@
   }
 }
 
-/* ---- Legacy footer classes (keep for backward compat) ---- */
-.footer-container {
-  display: none;
-} /* replaced by footer-root */
-
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-/* Column 1: Brand */
-.footer-brand-section {
-  flex: 1;
-  min-width: 250px;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 1rem;
-}
-
-.logo-box {
-  width: 3rem;
-  height: 3rem;
-  background: #ff6300;
-  display: grid;
-  place-items: center;
-  border-radius: 4px;
-}
-
-.logo-letter {
-  color: #fff;
-  font-family: "Inter", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-
-.brand-name {
-  color: #000;
-  font-family: "Inter", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-
-.footer-tagline {
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 300px;
-}
-
-/* Column 2: Links */
-.footer-links-section {
-  flex: 1;
-  min-width: 200px;
-}
-
-.footer-heading {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: #000;
-}
-
-.footer-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.menu-item {
-  font-size: 1rem;
-  color: #444;
-  cursor: pointer;
-  transition:
-    color 0.3s ease,
-    padding-left 0.3s ease;
-}
-
-.menu-item:hover {
-  color: #fd6f00;
-  padding-left: 5px;
-}
-
-/* Column 3: Social/Contact */
-.footer-social-section {
-  flex: 1;
-  min-width: 250px;
-}
-
-.social-icons-wrapper {
-  margin-bottom: 1.5rem;
-}
-
-/* Override social icon container if needed */
-.footer-root .social-icons {
-  display: flex;
-  gap: 1rem;
-}
-
-.footer-root .social-icon img,
-.footer-root .social-icon svg {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s ease;
-}
-
-.footer-root .social-icon:hover img,
-.footer-root .social-icon:hover svg {
-  transform: translateY(-3px);
-}
-
-.footer-contact-info p {
-  font-size: 0.95rem;
-  color: #666;
-}
-
-/* Footer Bottom */
-.footer-bottom {
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid #ddd;
-  text-align: center;
-  width: 100%;
-}
-
-.copyright-text {
-  color: #777;
-  font-size: 0.9rem;
-}
-
-/* Responsive Footer */
 @media (max-width: 768px) {
-  .footer-container {
-    padding: 3rem 1.5rem 1.5rem;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 2.5rem;
-  }
-
-  .footer-brand-section,
-  .footer-links-section,
-  .footer-social-section {
-    align-items: center;
-    width: 100%;
-  }
-
-  .footer-logo {
-    justify-content: center;
-  }
-
-  .footer-tagline {
-    margin: 0 auto;
-  }
-
-  .social-icons-wrapper {
-    display: flex;
-    justify-content: center;
-  }
-
-  /* Inherit component style override */
-  .social-icons-wrapper .social-icons {
-    justify-content: center !important;
-  }
-
-  .footer-menu {
-    align-items: center;
-  }
-
-  /* Fix for projects-title/contact-title resizing */
-  .projects-title,
   .contact-title {
     font-size: 2.5rem;
-  }
-
-  .contact-form {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-input,
-  .contact-button {
-    width: 100%;
-    max-width: 500px;
   }
 }
 
 @media (max-width: 480px) {
-  .projects-title,
   .contact-title {
     font-size: 2rem;
-  }
-
-  .brand-name {
-    font-size: 1.5rem;
-  }
-
-  .footer-heading {
-    margin-bottom: 1rem;
   }
 }
 

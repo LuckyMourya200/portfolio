@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import "./footersection.css";
-import adarth from "../assets/projects/adarth.webp";
-import backend from "../assets/projects/backend.webp";
-import oaysis from "../assets/oaysis.webp";
+import adarth from "../../assets/projects/adarth.webp";
+import backend from "../../assets/projects/backend.webp";
+import oaysis from "../../assets/projects/oaysis.webp";
 import { track } from "@vercel/analytics/react";
 
 const ProjectsSection = () => {

@@ -1,6 +1,6 @@
 import ProjectsSection from "./ProjectsSection";
-import ContactUsSection from "./ContactUsSection";
-import Footer from "./Footer";
+import ContactUsSection from "../contact/ContactUsSection";
+import Footer from "../../components/layout/Footer";
 import "./footersection.css";
 
 const FootersectionScreeen = () => {
