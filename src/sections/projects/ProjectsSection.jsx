@@ -165,8 +165,7 @@ const ProjectsSection = () => {
       <div className="section-header">
         <h2 className="section-title">Selected Work</h2>
         <p className="section-subtitle">
-          Production mobile apps, backend systems, and client work across React Native, 
-          Django, Spring Boot, NestJS, and Firebase.
+          A selection of mobile and backend applications built with React Native, Django, Spring Boot, and Node.js.
         </p>
       </div>
 
@@ -180,7 +179,7 @@ const ProjectsSection = () => {
           <div className="metric-label">App Downloads</div>
         </div>
         <div className="metric-card">
-          <div className="metric-value">6+</div>
+          <div className="metric-value">8</div>
           <div className="metric-label">Production Shipped</div>
         </div>
       </div>

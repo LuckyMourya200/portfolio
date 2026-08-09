@@ -40,7 +40,16 @@ const Navbar = ({
     <>
       <nav className={`navbar-container ${isScrolled ? "scrolled" : ""}`}>
         <div className="navbar-content">
-          <div className="logo-placeholder">LM.</div>
+          <button 
+            className="mobile-menu-btn mobile-only"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <div className={`hamburger ${isMobileMenuOpen ? "open" : ""}`}>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
           
           <div className="menu-items desktop-only">
             {menuItems.map((item) => {
@@ -62,20 +71,10 @@ const Navbar = ({
           <div className="nav-actions">
             <button
               id="nav-btn-resume"
-              className="download-btn desktop-only"
+              className="download-btn"
               onClick={handleDownload}
             >
               {buttonText}
-            </button>
-            <button 
-              className="mobile-menu-btn mobile-only"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              <div className={`hamburger ${isMobileMenuOpen ? "open" : ""}`}>
-                <span></span>
-                <span></span>
-              </div>
             </button>
           </div>
         </div>

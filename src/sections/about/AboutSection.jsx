@@ -44,7 +44,7 @@ const services = [
       </svg>
     ),
     title: "Cloud DevOps",
-    description: "AWS Certified solutions with Dockerized deployments. CI/CD pipelines, EC2/S3 management, and Nginx configurations.",
+    description: "Cloud infrastructure management and Dockerized deployments. Experienced with AWS (EC2, S3), CI/CD pipelines, and NGINX configurations.",
   },
 ];
 
@@ -96,8 +96,7 @@ const AboutSection = () => {
           <span className="about-label">Capability</span>
           <h2 className="about-title">Core Competencies</h2>
           <p className="about-description">
-            With expertise across the full product lifecycle, I thrive on turning
-            complex problems into elegant, performant solutions that users love.
+            I am a full-stack developer with experience taking applications from initial design to App Store deployment and managing the underlying cloud infrastructure.
           </p>
         </div>
 

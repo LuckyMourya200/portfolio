@@ -16,8 +16,7 @@ const Header = () => {
           <h1 className="hero-title">Lucky Mourya</h1>
           <h2 className="hero-subtitle">Mobile & Full-Stack Developer</h2>
           <p className="hero-description">
-            I build and ship production mobile applications, scalable backend systems, 
-            and high-performance digital products with a focus on deep technical execution.
+            I build and ship production mobile applications and backend systems using React Native, Spring Boot, and Node.js.
           </p>
           <a
             id="header-btn-connect"

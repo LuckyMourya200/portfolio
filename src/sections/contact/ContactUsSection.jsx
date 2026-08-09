@@ -7,7 +7,7 @@ const ContactUsSection = () => {
     <SectionWrapper id="contact-me" className="contact-section">
       <h2 className="contact-title">Let&apos;s Build Together</h2>
       <p className="contact-description">
-        Seeking collaboration on full-stack solutions and high-performance digital products.
+        Seeking opportunities to build mobile applications and full-stack systems.
       </p>
       <ScheduleButton />
     </SectionWrapper>
