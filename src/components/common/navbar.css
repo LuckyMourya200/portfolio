@@ -26,13 +26,6 @@
   justify-content: space-between;
 }
 
-.logo-placeholder {
-  font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: -0.03em;
-  color: var(--text-primary);
-}
-
 .menu-items {
   display: flex;
   gap: var(--space-8);
